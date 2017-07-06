@@ -15,3 +15,6 @@ $ npm start # 启动jsBundle
 - Atom
 - Nuclide
 - Xcode
+
+## 代码调试
+http://localhost:8081/debugger-ui 浏览器访问链接
