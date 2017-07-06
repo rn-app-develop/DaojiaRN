@@ -18,3 +18,6 @@ $ npm start # 启动jsBundle
 
 ## 代码调试
 http://localhost:8081/debugger-ui 浏览器访问链接
+## 参考教程
+[https://github.com/jondot/awesome-react-native](https://github.com/jondot/awesome-react-native)
+[http://facebook.github.io/react-native/docs/getting-started.html](http://facebook.github.io/react-native/docs/getting-started.html)
