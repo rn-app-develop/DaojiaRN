@@ -3,20 +3,20 @@
  * https://github.com/facebook/react-native
  * @flow
  */
+import React, { Component } from 'react'
 
-import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
   View
-} from 'react-native';
+} from 'react-native'
 
 export default class DaojiaRN extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to React Native! Welcome to Daojia!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
