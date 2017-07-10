@@ -13,7 +13,7 @@ module.exports = {
     'react',
     'react-native',
   ],
-  // "parser": "babel-eslint",
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -25,6 +25,7 @@ module.exports = {
     "node": true,
   },
   "rules" : {
+    "intent": [ERROR, ERROR, {"SwitchCase": 1}],
     // "array-bracket-spacing": [2, "never"],
     // 'no-unused-vars': [ERROR, {args: 'none'}],
     // "no-undef" : ERROR,
