@@ -11,7 +11,14 @@ import {
   View
 } from 'react-native'
 
+import PropTypes from 'prop-types' // 属性枚举
+import Swiper from './components/Swiper'
+
 export default class DaojiaRN extends Component {
+  static propTypes = {
+    horizontal: PropTypes.bool
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -25,6 +32,7 @@ export default class DaojiaRN extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
+        <Swiper></Swiper>
       </View>
     );
   }

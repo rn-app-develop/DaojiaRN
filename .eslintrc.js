@@ -26,10 +26,10 @@ module.exports = {
   },
   "rules" : {
     "intent": [ERROR, ERROR, {"SwitchCase": 1}],
-    // "array-bracket-spacing": [2, "never"],
+    "array-bracket-spacing": [ERROR, "never"],
     // 'no-unused-vars': [ERROR, {args: 'none'}],
     // "no-undef" : ERROR,
-    // 'quotes': [ERROR, 'single', {avoidEscape: true, allowTemplateLiterals: true }],
+    'quotes': [ERROR, 'single', {avoidEscape: true, allowTemplateLiterals: true }],
     //
     // React & jsx
     // 'react/jsx-uses-react': ERROR,
