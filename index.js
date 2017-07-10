@@ -8,7 +8,7 @@ import React, { Component } from 'react'
 import {
   StyleSheet,
   Text,
-  View,
+  View
 } from 'react-native'
 
 export default class DaojiaRN extends Component {
