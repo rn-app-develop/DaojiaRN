@@ -19,7 +19,7 @@ export default class DaojiaRN extends Component {
           Welcome to React Native! Welcome to Daojia!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.ios.js
+          To get started, edit js/index.js
         </Text>
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}

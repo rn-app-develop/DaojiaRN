@@ -9,7 +9,7 @@ import {
   AppRegistry,
 } from 'react-native';
 
-import DaojiaRN from './index.js';
+import DaojiaRN from './js/index.js';
 
 // export default class DaojiaRN extends Component {
 //   render() {
