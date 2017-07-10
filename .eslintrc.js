@@ -6,7 +6,8 @@ const ERROR = 2;
 module.exports = {
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:react-native/all"
   ],
   plugins: [
     'react',
