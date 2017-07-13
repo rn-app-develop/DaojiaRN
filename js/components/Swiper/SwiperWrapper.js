@@ -26,8 +26,13 @@ export default class SwiperWrapper extends Component {
     }
 
     return (
-      <ViewPagerAndroid>
-        <Text>android swiper</Text>
+      <ViewPagerAndroid style={[{flex: 1}, styles.swiper]}>
+        <View style={{flex: 1}}>
+          <Text style={styles.text}>android swiper</Text>
+        </View>
+        <View>
+          <Text style={styles.text}>android swiper2</Text>
+        </View>
       </ViewPagerAndroid>
     )
   }
