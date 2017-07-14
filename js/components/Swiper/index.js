@@ -11,7 +11,6 @@ import PropTypes from 'prop-types' // 属性枚举
 import SwiperWrapper from './SwiperWrapper'
 
 export default class extends Component {
-
   render () {
     let props = this.props
 
@@ -34,6 +33,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'transparent',
     position: 'relative'
-  },
+  }
 
 })

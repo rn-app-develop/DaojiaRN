@@ -34,7 +34,7 @@ export default class DaojiaRN extends Component {
         </Text>
         <Swiper></Swiper>
       </View>
-    );
+    )
   }
 }
 

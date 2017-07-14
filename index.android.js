@@ -6,10 +6,10 @@
 
 // import React, { Component } from 'react';
 import {
-  AppRegistry,
-} from 'react-native';
+  AppRegistry
+} from 'react-native'
 
-import DaojiaRN from './js/index.js';
+import DaojiaRN from './js/index.js'
 
 // export default class DaojiaRN extends Component {
 //   render() {
@@ -49,4 +49,4 @@ import DaojiaRN from './js/index.js';
 //   },
 // });
 
-AppRegistry.registerComponent('DaojiaRN', () => DaojiaRN);
+AppRegistry.registerComponent('DaojiaRN', () => DaojiaRN)
