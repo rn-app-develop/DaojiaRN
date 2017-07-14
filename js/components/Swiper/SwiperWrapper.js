@@ -15,24 +15,32 @@ import {
 const { width, height } = Dimensions.get('window')
 
 export default class SwiperWrapper extends Component {
+  // var defaultProps = {
+  //   ref: 'swiperWrapper'
+  // }
   render () {
     console.log(Platform.OS, Dimensions.get('window'), Dimensions.get('screen'));
+
+    let pages = this.props.children.map(
+        (element, index) => <View key={index} style={{flex: 1}}>{element}</View>
+      )
     if (Platform.OS === 'ios') {
       return (
-        <ScrollView style={styles.swiper}>
-          <Text style={styles.text}>ios swiper</Text>
+        <ScrollView
+          style={styles.swiper}
+          ref='swiperWrapper'
+          >
+          {pages}
         </ScrollView>
       )
     }
 
     return (
-      <ViewPagerAndroid style={[{flex: 1}, styles.swiper]}>
-        <View style={{flex: 1}}>
-          <Text style={styles.text}>android swiper</Text>
-        </View>
-        <View>
-          <Text style={styles.text}>android swiper2</Text>
-        </View>
+      <ViewPagerAndroid
+        style={[{flex: 1}, styles.swiper]}
+        ref='swiperWrapper'
+        >
+        {pages}
       </ViewPagerAndroid>
     )
   }
