@@ -1,52 +1,21 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
-  Text,
+  // Text,
   View,
   ScrollView,
   Dimensions,
-  TouchableOpacity,
+  // TouchableOpacity,
   ViewPagerAndroid,
   Platform,
-  ActivityIndicator,
+  // ActivityIndicator,
   StyleSheet
 } from 'react-native'
-
 const { width, height } = Dimensions.get('window')
 
 export default class SwiperWrapper extends Component {
   static propTypes = {
-    horizontal: PropTypes.bool,
-    children: PropTypes.node.isRequired,
-    style: View.propTypes.style,
-    pageStyle: View.propTypes.style,
-  }
-
-  static defaultProps = {
-    horizontal: true,
-  }
-
-  state = this.initState(this.props, true)
-
-  initState (props, setOffsetInState) {
-    // set the current state
-    const state = this.state || {}
-
-    const initState = {
-      autoplayEnd: false,
-      loopJump: false
-    }
-
-    const newInternals = {
-      isScrolling: false
-    }
-
-    initState.total = props.children ? props.children.length || 1 : 0
-
-    if (state.total === initState.total) {
-      // retain the index
-
-    }
+    pageStyle: View.propTypes.style
   }
 
   render () {
