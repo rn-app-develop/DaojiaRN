@@ -39,7 +39,7 @@ export default class DaojiaRN extends Component {
         <Scene
           leftButtonTextStyle={{color: 'green'}}
           backButtonTextStyle={{color: 'red'}}>
-          <Scene key='home' component={Home} title='Home' />
+          <Scene key='home' component={Home} title='Home' hideNavBar/>
           <Scene key='login' component={Login} title='Login'/>
         </Scene>
       </Router>
