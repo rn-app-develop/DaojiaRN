@@ -7,7 +7,8 @@ module.exports = {
   'extends': [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:react-native/all'
+    'plugin:react-native/all',
+    'standard'
   ],
   plugins: [
     'react',
