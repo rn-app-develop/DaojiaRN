@@ -21,6 +21,7 @@ import {
 
 import Home from './pages/Home' // 属性枚举
 import Login from './pages/Login' // 属性枚举
+import TabView from './pages/TabView' // 属性枚举
 
 // 创建状态管理器 reducer
 const reducerCreate = params => {
@@ -41,6 +42,9 @@ export default class DaojiaRN extends Component {
           backButtonTextStyle={{color: 'red'}}>
           <Scene key='home' component={Home} title='Home' hideNavBar/>
           <Scene key='login' component={Login} title='Login'/>
+          <Scene key='drawer' contentComponent={TabView}>
+
+          </Scene>
         </Scene>
       </Router>
     )
