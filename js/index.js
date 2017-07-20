@@ -42,11 +42,21 @@ export default class DaojiaRN extends Component {
           backButtonTextStyle={{color: 'red'}}>
           <Scene key='home' component={Home} title='Home' hideNavBar/>
           <Scene key='login' component={Login} title='Login'/>
-          <Scene key='drawer' contentComponent={TabView}>
-
+          <Scene key='tabbar' tabs tabBarStyle={styles.tabBarStyle} hideNavBar>
+            <Scene key='tab1' component={TabView} title='tab #1' initial></Scene>
+            <Scene key='tab2' component={TabView} title='tab #2'></Scene>
+            <Scene key='tab3' component={TabView} title='tab #3'></Scene>
+            <Scene key='tab4' component={TabView} title='tab #4'></Scene>
+            <Scene key='tab5' component={TabView} title='tab #5'></Scene>
           </Scene>
         </Scene>
       </Router>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  tabBarStyle: {
+    backgroundColor: '#bbb'
+  }
+})

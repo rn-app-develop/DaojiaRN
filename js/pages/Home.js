@@ -23,9 +23,10 @@ export default class Home extends Component {
           onPress={() => Actions.login({data: 'Custom data', title: 'Custom title'})}>
           Welcome to React Native! Welcome to Daojia!
         </Button>
-        <Text style={styles.instructions}>
-          To get started, edit js/index.js
-        </Text>
+        <Button style={styles.instructions}
+          onPress={() => Actions.tabbar()}>
+          to TabView
+        </Button>
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu

@@ -48,6 +48,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#f5fcff',
     borderWidth: 2,
-    broderColor: 'red'
+    borderColor: 'red'
   }
 })
