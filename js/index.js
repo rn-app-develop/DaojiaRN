@@ -19,9 +19,9 @@ import {
   ActionConst
 } from 'react-native-router-flux'
 
-import Home from './pages/Home' // 属性枚举
-import Login from './pages/Login' // 属性枚举
-import TabView from './pages/TabView' // 属性枚举
+import Home from './pages/Home' // 首页
+import Login from './pages/Login' // 登录页
+import TabView from './pages/TabView' // 导航
 
 // 创建状态管理器 reducer
 const reducerCreate = params => {
