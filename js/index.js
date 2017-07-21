@@ -22,6 +22,9 @@ import {
 import Home from './pages/Home' // 首页
 import Login from './pages/Login' // 登录页
 import TabView from './pages/TabView' // 导航
+import Icon from 'react-native-vector-icons/Entypo';
+
+const myIcon = (<Icon name="back" size={20} color="#900" />)
 
 // 创建状态管理器 reducer
 const reducerCreate = params => {
@@ -42,12 +45,15 @@ export default class DaojiaRN extends Component {
           backButtonTextStyle={{color: 'red'}}>
           <Scene key='home' component={Home} title='Home' hideNavBar/>
           <Scene key='login' component={Login} title='Login'/>
-          <Scene key='tabbar' tabs tabBarStyle={styles.tabBarStyle} hideNavBar>
-            <Scene key='tab1' component={TabView} title='tab #1' initial></Scene>
-            <Scene key='tab2' component={TabView} title='tab #2'></Scene>
-            <Scene key='tab3' component={TabView} title='tab #3'></Scene>
-            <Scene key='tab4' component={TabView} title='tab #4'></Scene>
-            <Scene key='tab5' component={TabView} title='tab #5'></Scene>
+          <Scene key='tabbar' tabs hideNavBar
+            tabBarStyle={styles.tabBarStyle}
+            labelStyle={styles.labelStyle}
+            >
+            <Scene key='tab1' icon={myIcon} component={TabView} title='tab #1' initial></Scene>
+            <Scene key='tab2' icon={myIcon} component={TabView} title='tab #2'></Scene>
+            <Scene key='tab3' icon={myIcon} component={TabView} title='tab #3'></Scene>
+            <Scene key='tab4' icon={myIcon} component={TabView} title='tab #4'></Scene>
+            <Scene key='tab5' icon={myIcon} component={TabView} title='tab #5'></Scene>
           </Scene>
         </Scene>
       </Router>
@@ -57,6 +63,10 @@ export default class DaojiaRN extends Component {
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    backgroundColor: '#bbb'
+    backgroundColor: '#bbb',
+    paddingBottom: 10,
+  },
+  labelStyle: {
+    fontSize: 14
   }
 })
