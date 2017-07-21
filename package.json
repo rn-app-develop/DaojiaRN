@@ -13,6 +13,7 @@
 		"react-native": "0.46.0",
 		"react-native-button": "^2.1.0",
 		"react-native-router-flux": "^4.0.0-beta.11",
+		"react-native-vector-icons": "^4.2.0",
 		"react-navigation": "^1.0.0-beta.11"
 	},
 	"devDependencies": {
