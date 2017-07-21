@@ -9,6 +9,8 @@ import {
 
 import Button from 'react-native-button'
 import { Actions } from 'react-native-router-flux'
+import Icon from 'react-native-vector-icons/FontAwesome';
+const myIcon = (<Icon name="rocket" size={30} color="#900" />)
 
 export default class TabView extends Component {
   constructor (props) {
@@ -31,11 +33,11 @@ export default class TabView extends Component {
       <View style={[styles.container, props.sceneStyle]}>
         <Button onPress={() => {Actions.pop}}>Back</Button>
         <Text>Tab title: {props.title} name: {props.name}</Text>
-        <Button onPress={() => {Actions.tab1()}}>Switch tab1</Button>
-        <Button onPress={() => {Actions.tab2()}}>Switch tab2</Button>
-        <Button onPress={() => {Actions.tab3()}}>Switch tab3</Button>
-        <Button onPress={() => {Actions.tab4()}}>Switch tab4</Button>
-        <Button onPress={() => {Actions.tab5()}}>Switch tab5</Button>
+        <Button onPress={() => {Actions.tab1()}}>{myIcon} Switch tab1</Button>
+        <Button onPress={() => {Actions.tab2()}}>{myIcon} Switch tab2</Button>
+        <Button onPress={() => {Actions.tab3()}}>{myIcon} Switch tab3</Button>
+        <Button onPress={() => {Actions.tab4()}}>{myIcon} Switch tab4</Button>
+        <Button onPress={() => {Actions.tab5()}}>{myIcon} Switch tab5</Button>
       </View>
     )
   }
