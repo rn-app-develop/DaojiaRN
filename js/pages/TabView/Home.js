@@ -12,7 +12,7 @@ import {
 } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Button from 'react-native-button'
-import Swiper from '../components/Swiper'
+import Swiper from '../../components/Swiper'
 
 export default class Home extends Component {
 
