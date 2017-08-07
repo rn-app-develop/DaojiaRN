@@ -70,13 +70,13 @@ import PropTypes from 'prop-types' // 属性枚举
 // 定义并导出组件
 export default class MyComponent extends Component {
 
-  // 定义属性
+  // 定义属性, 对外提供接口 （可选）
   static propTypes = {
     text: PropTypes.string.isRequired,
     hide: PropTypes.bool
   }
 
-  // 定义默认属性
+  // 定义默认属性  (可选)
   static defaultProps = {
     text: "Hello World",
     hide: true
@@ -86,51 +86,57 @@ export default class MyComponent extends Component {
   constructor (props) {
     super(props) // 继承属性，赋值操作
 
-    // 默认状态
+    // 默认状态  (可选)
     this.state = {
       title: '',
     }
+  }
 
-    // 自定义函数
-    clickHandle () {
-      // 改变状态使用 setState
-      this.setState({
-        title: 'clickHandle'
-      })
+  // 默认状态的另一种写法   (可选)
+  state = {
+    title: '',
+  }
 
-      // 异步更新状态，状态
-      this.setState((prevState, props) => ({
-        title: prevState.title + props.title
-      }))
+  // 自定义函数  (可选)
+  clickHandle () {
+    // 改变状态使用 setState
+    this.setState({
+      title: 'clickHandle'
+    })
 
-      // 不同的状态分别设置不会被覆盖
-      this.setState({
-        state1: 'state1'
-      })
+    // 异步更新状态，状态  (可选)
+    this.setState((prevState, props) => ({
+      title: prevState.title + props.title
+    }))
 
-      // 不会影响 state1
-      this.setState({
-        state2: 'state2'
-      })
-    }
+    // 不同的状态分别设置不会被覆盖  (可选)
+    this.setState({
+      state1: 'state1'
+    })
 
-    render () {
-      return (
-        <View>
-          <Text>{text}<Text>
-        </View>
-      )
-    }
+    // 不会影响 state1  (可选)
+    this.setState({
+      state2: 'state2'
+    })
+  }
 
-    // 渲染完成
-    componentDidMount() {
+// 必须
+  render () {
+    return (
+      <View>
+        <Text>{text}<Text>
+      </View>
+    )
+  }
 
-    }
+  // 渲染完成  (可选)
+  componentDidMount() {
 
-    // 销毁
-    componentWillUnmount() {
+  }
 
-    }
+  // 销毁  (可选)
+  componentWillUnmount() {
+
   }
 }
 ```
@@ -147,9 +153,10 @@ import {
 } from 'react-native'
 
 export default class statelessComponent extends PureComponent {
+
+  // 必须
   render () {
     let props = this.props
-
     return (
       <View style={styles.header}>
       <Text style={styles.headerText}>{props.title}</Text>
@@ -157,6 +164,59 @@ export default class statelessComponent extends PureComponent {
     )
   }
 }
+```
+
+## 样式写法
+
+```js
+var styles = StyleSheet.create({
+  header: {
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    borderColor: '#e7e9e4',
+    borderBottomWidth: 0.5
+  },
+  headerLine: {
+    position: 'absolute',
+    width: JDDevice.width * 0.6,
+    left: JDDevice.width * 0.2,
+    top: 24,
+    borderTopWidth: 0.5,
+    borderColor: '#333'
+  },
+  headerText: {
+    alignSelf: 'center',
+    color: '#333',
+    fontSize: 17,
+    padding: 5,
+    fontWeight: 'bold',
+    backgroundColor: '#fff',
+  }
+})
+```
+## 到家sprite拼图加载方式
+
+使用一个View包装图片，View的大小为切图大小，超出部分hide，Image 是合并后的原图大小，用绝对或者相对定位控制显示位置，传递不同的 left 和 top 即可模拟 backgroundPosition。
+
+```html
+<View style={styles.starWrap} key={val}>
+  <Image style={[styles.star, {left: starLeft}]} source={{uri: 'http://static-o2o.360buyimg.com/daojia/new/images/icon/newStar.png'}}></Image>
+</View>
+```
+
+```js
+starWrap: {
+  height: 10,
+  width: 10,
+  overflow: 'hidden',
+  alignSelf: 'center'
+},
+star: {
+  position: 'relative',
+  height: 10,
+  width: 50,
+},
 ```
 ## 注册路由
 ```js
@@ -201,59 +261,6 @@ function() {
 <Button onPress={Actions.pop}>pop</Button>
 ```
 
-## 样式写法
-
-```js
-var styles = StyleSheet.create({
-  header: {
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'stretch',
-    borderColor: '#e7e9e4',
-    borderBottomWidth: 0.5
-  },
-  headerLine: {
-    position: 'absolute',
-    width: JDDevice.width * 0.6,
-    left: JDDevice.width * 0.2,
-    top: 24,
-    borderTopWidth: 0.5,
-    borderColor: '#333'
-  },
-  headerText: {
-    alignSelf: 'center',
-    color: '#333',
-    fontSize: 17,
-    padding: 5,
-    fontWeight: 'bold',
-    backgroundColor: '#fff',
-  }
-})
-```
-
-## 到家sprite拼图加载方式
-
-使用一个View包装图片，View的大小为切图大小，超出部分hide，Image 是合并后的原图大小，用绝对或者相对定位控制显示位置，传递不同的 left 和 top 即可模拟 backgroundPosition。
-
-```html
-<View style={styles.starWrap} key={val}>
-  <Image style={[styles.star, {left: starLeft}]} source={{uri: 'http://static-o2o.360buyimg.com/daojia/new/images/icon/newStar.png'}}></Image>
-</View>
-```
-
-```js
-starWrap: {
-  height: 10,
-  width: 10,
-  overflow: 'hidden',
-  alignSelf: 'center'
-},
-star: {
-  position: 'relative',
-  height: 10,
-  width: 50,
-},
-```
 ## 开发规则
 - 代码书写规范要严格按照 ESLint 规范执行，对规范有歧义可以统一修改规范，共同完善代码规范体系，一旦形成统一规范后，尽量不用轻易改变，保持不变原则；
 - 开发页面和组件时，要确保页面和组件可以独立运行，不要过多依赖外部因素，例如接口，平台环境，路由配置，传参等；
