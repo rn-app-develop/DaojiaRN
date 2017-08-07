@@ -22,3 +22,5 @@ http://localhost:8081/debugger-ui 浏览器访问链接
 - [https://github.com/jondot/awesome-react-native](https://github.com/jondot/awesome-react-native)
 - [http://facebook.github.io/react-native/docs/getting-started.html](http://facebook.github.io/react-native/docs/getting-started.html)
 - [http://reactnative.cn/](http://reactnative.cn/)
+## 项目目录结构
+* Actions 包含整个应用的状态发生变化的描述条件，单独维护一些常量模型；
