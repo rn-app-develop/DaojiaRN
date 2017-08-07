@@ -158,6 +158,48 @@ export default class statelessComponent extends PureComponent {
   }
 }
 ```
+## 注册路由
+```js
+
+<Scene
+// 必须参数
+key="home" // key 唯一ID 跳转用
+component={Home} // component 路由页面
+
+// 可选参数
+leftButtonTextStyle={{ color: 'green' }}  // 左侧标题样式
+backButtonTextStyle={{ color:'red' }}  // 标题栏回退按钮样式
+title="Launch" // title="Launch" 导航标题
+initial  // initial 应用默认入口页面
+tabs // 是否包含底部 tab
+onEnter={() => {}}  // 进入路由处理
+onExit={() => {}} // 离开路由处理
+
+...
+/>
+```
+**参考API: [https://github.com/aksonov/react-native-router-flux/blob/master/docs/API.md](https://github.com/aksonov/react-native-router-flux/blob/master/docs/API.md)**
+## 页面之间跳转
+```js
+import {Actions} from "react-native-router-flux";
+Actions.home(PARAMS) // 路由传参
+```
+## 当前页面重载
+```js
+Actions.refresh({param1: 'hello', param2: 'world'})
+```
+## 回退页面
+```js
+import {Actions} from "react-native-router-flux";
+
+// JS 代码中回退
+function() {
+  Actions.pop
+}
+
+// JSX 中回退
+<Button onPress={Actions.pop}>pop</Button>
+```
 
 ## 样式写法
 
@@ -214,7 +256,7 @@ star: {
 ```
 ## 开发规则
 - 代码书写规范要严格按照 ESLint 规范执行，对规范有歧义可以统一修改规范，共同完善代码规范体系，一旦形成统一规范后，尽量保持不变原则；
-- 开发页面和组件时，要确保页面和组件可以独立运行，不要过多依赖外部因素，例如接口，平台环境，路由配置等；
-- JDReact 是京东封装好的一套组件集合，页面开发中在不影响其他页面的情况下，可以单独引用，在移植其他客户端时可以同时引用JDReact SDK；
+- 开发页面和组件时，要确保页面和组件可以独立运行，不要过多依赖外部因素，例如接口，平台环境，路由配置，传参等；
+- JDReact 是京东封装好的一套组件集合，页面开发中在不影响其他页面的情况下，可以单独引用，在移植其他客户端时个别组件需要同时引用 JDReact SDK；
 - 将页面进行细粒度划分组件化，使每一个组件只做一件事或者包含多个独立的子组件，并且保持独立性，对外提供PropTypes接口；
 - 充分利用 PureComponent 提升性能。例如首页的大部分楼层，都不需要更新重绘，均可以继承PureComponent；
