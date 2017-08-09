@@ -11,48 +11,62 @@ import {
   View
 } from 'react-native'
 
-import PropTypes from 'prop-types' // 属性枚举
-import Swiper from './components/Swiper'
+import {
+  Scene,
+  Router,
+  Actions,
+  Reducer,
+  ActionConst
+} from 'react-native-router-flux'
+
+import Home from './pages/TabView/Home' // 首页
+import Login from './pages/Login' // 登录页
+import TabView from './pages/TabView' // 导航
+import Icon from 'react-native-vector-icons/Entypo';
+
+const myIcon = (<Icon name="back" size={20} color="#900" />)
+
+// 创建状态管理器 reducer
+const reducerCreate = params => {
+  const defaultReducer = new Reducer(params)
+  return (state, action) => {
+    console.log('Action:', action)
+    return defaultReducer(state, action)
+  }
+}
 
 export default class DaojiaRN extends Component {
-  static propTypes = {
-    horizontal: PropTypes.bool
-  }
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native! Welcome to Daojia!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit js/index.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-        <Swiper></Swiper>
-      </View>
+      <Router createReducer={reducerCreate} tintColor='red'>
+        <Scene
+          leftButtonTextStyle={{color: 'green'}}
+          backButtonTextStyle={{color: 'red'}}>
+          {/* <Scene key='home' component={Home} title='Home' hideNavBar/> */}
+          <Scene key='login' component={Login} title='Login'/>
+          <Scene key='tabbar' tabs hideNavBar initial
+            tabBarStyle={styles.tabBarStyle}
+            labelStyle={styles.labelStyle}
+            >
+            <Scene key='tab1' icon={myIcon} component={Home} title='tab #1' initial hideNavBar></Scene>
+            <Scene key='tab2' icon={myIcon} component={TabView} title='tab #2'></Scene>
+            <Scene key='tab3' icon={myIcon} component={TabView} title='tab #3'></Scene>
+            <Scene key='tab4' icon={myIcon} component={TabView} title='tab #4'></Scene>
+            <Scene key='tab5' icon={myIcon} component={TabView} title='tab #5'></Scene>
+          </Scene>
+        </Scene>
+      </Router>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  tabBarStyle: {
+    backgroundColor: '#bbb',
+    paddingBottom: 10,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+  labelStyle: {
+    fontSize: 14
+  }
+})

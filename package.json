@@ -5,13 +5,21 @@
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest",
+<<<<<<< HEAD
 		"lint": "standard | snazzy --fix"
+=======
+		"lint": "standard | snazzy"
+>>>>>>> eb081e953157b4ee8401b35cf82e53a7050f5aaa
 	},
 	"dependencies": {
 		"axios": "^0.16.2",
 		"lodash": "^4.17.4",
 		"react": "16.0.0-alpha.12",
-		"react-native": "0.46.0"
+		"react-native": "0.46.0",
+		"react-native-button": "^2.1.0",
+		"react-native-router-flux": "^4.0.0-beta.11",
+		"react-native-vector-icons": "^4.2.0",
+		"react-navigation": "^1.0.0-beta.11"
 	},
 	"devDependencies": {
 		"babel-eslint": "^7.2.3",
