@@ -23,6 +23,7 @@ import Home from './pages/TabView/Home' // 首页
 import Login from './pages/Login' // 登录页
 import TabView from './pages/TabView' // 导航
 import Icon from 'react-native-vector-icons/Entypo';
+import './utils/interceptors'
 
 const myIcon = (<Icon name="back" size={20} color="#900" />)
 
