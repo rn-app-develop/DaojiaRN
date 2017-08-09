@@ -3,9 +3,9 @@ import axios from 'axios';
 // let baseURL = 'https://pregw.o2o.jd.com/client' // 第一套预发布
 // let baseURL = 'http://testgw.o2o.jd.com/client' // 第二套预发布
 // let baseURL = 'https://gw.o2o.jd.com/client' // 线上环境
-let baseURL = 'http://gw.o2o.jd.com/client';
+// let baseURL = 'http://gw.o2o.jd.com/client';
 // let baseURL = 'http://daojia.jd.com/client'
-// let baseURL = 'http://testpdjm.jd.com/client'
+let baseURL = 'http://testpdjm.jd.com/client'
 let indexParams = {
   functionId:'indexh5/getIndex',
   body:{
@@ -99,7 +99,7 @@ let storeParams = {
 };
 
 export const getStoreDetail = function (storeId) {
-  storeParams.body.storeId = storeId;
+  // storeParams.body.storeId = storeId;
   // return axios.get(baseURL, {params: storeParams});
   return axios.getAPI(storeParams);
 };

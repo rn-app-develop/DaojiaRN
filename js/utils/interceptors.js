@@ -1,4 +1,5 @@
 import axios from 'axios'
+import qs from 'querystring'
 
 // const commonParams = {platCode: 'H5', appName: 'paidaojia', appVersion: '4.4.0'}
 // 公共参数
@@ -7,19 +8,22 @@ const commonParams = {platCode: 'H5', appName: 'paidaojia', appVersion: '4.4.0'}
 // const baseURL = 'https://pregw.o2o.jd.com/client' // 第一套预发布
 // const baseURL = 'http://testgw.o2o.jd.com/client' // 第二套预发布
 // const baseURL = 'https://gw.o2o.jd.com/client' // 线上环境
-const baseURL = 'http://gw.o2o.jd.com/client';
+// const baseURL = 'http://gw.o2o.jd.com/client';
 // const baseURL = 'https://daojia.jd.com/client'
 // const baseURL = 'http://testpdjm.jd.com/client'
+const baseURL = 'https://gw-o2o.jd.com/client';
 
 // axios.defaults.baseURL = baseURL;
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 axios.getAPI = axios.prototype.getAPI = (params) => {
   return axios.get(baseURL, {params: params})
 }
 
 axios.postAPI = axios.prototype.postAPI = (params) => {
-  return axios.post(baseURL, params)
+  return axios.post(baseURL, qs.stringify(params))
 }
+
 
 // Add a request interceptor
 axios.interceptors.request.use(function (config) {
@@ -29,6 +33,8 @@ axios.interceptors.request.use(function (config) {
     ...config.params,
     ...commonParams
   }
+
+  console.log(config)
   return config;
 }, function (error) {
   // Do something with request error

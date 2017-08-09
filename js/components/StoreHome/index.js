@@ -17,7 +17,7 @@ import StoreInfo from './StoreInfo.js'
 import StoreSearch from './StoreSearch.js'
 import AsideMenu from './AsideMenu.js'
 import StoreList from './StoreList.js'
-import { getStoreHome } from '../../api'
+import { getStoreDetail } from '../../utils/apiHelper.js'
 
 const winW = Dimensions.get('window').width
 const winH = Dimensions.get('window').height
@@ -42,18 +42,11 @@ export default class StoreHome extends Component {
             articleHeight: winH - posTop,
             yPosition: new Animated.ValueXY({x: 0, y: posTop})
         }
-        const params = {
-            storeId: '11679834',
-            skuId: '',
-            activityId: '',
-            promotionType: '',
-            longitude: 116.30144,
-            latitude: 39.8637
-        }
-        getStoreHome(params).then((resp) => {
-          
-        }).catch(() => {
-          
+        
+        getStoreDetail().then((resp) => {
+          console.log(resp)
+        }).catch((error) => {
+          console.log(error)
         })
         
     }

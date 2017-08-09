@@ -8,8 +8,9 @@
 import {
   AppRegistry
 } from 'react-native'
-
+import './js/utils/interceptors.js'
 import DaojiaRN from './js/components/StoreHome/index.js'
 
+console.log("init")
 
 AppRegistry.registerComponent('DaojiaRN', () => DaojiaRN)
