@@ -5,9 +5,10 @@
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest",
-    "lint": "standard | snazzy --fix"
+		"lint": "standard | snazzy --fix"
 	},
 	"dependencies": {
+		"axios": "^0.16.2",
 		"lodash": "^4.17.4",
 		"react": "16.0.0-alpha.12",
 		"react-native": "0.46.0"
