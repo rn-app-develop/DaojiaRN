@@ -12,7 +12,7 @@ import {
 } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Button from 'react-native-button'
-import Swiper from '../../components/Swiper'
+import Swiper from '../../components/common/Swiper'
 
 export default class Home extends Component {
 
@@ -20,8 +20,8 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
         <Button style={styles.welcome}
-          onPress={() => Actions.login({data: 'Custom data', title: 'Custom title'})}>
-          Welcome to React Native! Welcome to Daojia!
+          onPress={() => Actions.storeHome({data: 'Custom data', title: '门店主页'})}>
+          去门店主页
         </Button>
         <Button style={styles.instructions}
           onPress={() => Actions.tabbar()}>

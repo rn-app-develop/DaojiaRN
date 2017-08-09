@@ -22,6 +22,7 @@ import {
 import Home from './pages/TabView/Home' // 首页
 import Login from './pages/Login' // 登录页
 import TabView from './pages/TabView' // 导航
+import StoreHome from './components/StoreHome' // 导航
 import Icon from 'react-native-vector-icons/Entypo';
 import './utils/interceptors'
 
@@ -46,6 +47,7 @@ export default class DaojiaRN extends Component {
           backButtonTextStyle={{color: 'red'}}>
           {/* <Scene key='home' component={Home} title='Home' hideNavBar/> */}
           <Scene key='login' component={Login} title='Login'/>
+          <Scene key='storeHome' component={StoreHome} title='门店主页'/>
           <Scene key='tabbar' tabs hideNavBar initial
             tabBarStyle={styles.tabBarStyle}
             labelStyle={styles.labelStyle}
