@@ -27,7 +27,9 @@ import Icon from 'react-native-vector-icons/Entypo';
 import './utils/interceptors'
 
 const myIcon = (<Icon name="back" size={20} color="#900" />)
+import nav from './assets/nav4.png'
 
+console.log(nav)
 // 创建状态管理器 reducer
 const reducerCreate = params => {
   const defaultReducer = new Reducer(params)
