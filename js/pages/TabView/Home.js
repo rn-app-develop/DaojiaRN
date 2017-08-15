@@ -14,6 +14,7 @@ import { Actions } from 'react-native-router-flux'
 import Button from 'react-native-button'
 // import Swiper from '../../components/common/Swiper'
 import Banner from '../../components/common/Banner'
+import TabIcon from '../../components/common/TabView/TabIcon'
 
 export default class Home extends Component {
 
@@ -32,6 +33,7 @@ export default class Home extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
+        <TabIcon></TabIcon>
         <Banner></Banner>
       </View>
     )

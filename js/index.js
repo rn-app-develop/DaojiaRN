@@ -16,6 +16,7 @@ import {
   Router,
   Actions,
   Reducer,
+  Tabs,
   ActionConst
 } from 'react-native-router-flux'
 
@@ -26,10 +27,10 @@ import StoreHome from './components/StoreHome' // 导航
 import Icon from 'react-native-vector-icons/Entypo';
 import './utils/interceptors'
 
-const myIcon = (<Icon name="back" size={20} color="#900" />)
-import nav from './assets/nav4.png'
+import TabIcon from './components/common/TabView/TabIcon'
 
-console.log(nav)
+// const myIcon = (<Icon name="back" size={20} color="#900" />)
+// console.log(nav)
 // 创建状态管理器 reducer
 const reducerCreate = params => {
   const defaultReducer = new Reducer(params)
@@ -39,37 +40,47 @@ const reducerCreate = params => {
   }
 }
 
+const getSceneStyle = () => ({
+  backgroundColor: 'white',
+  shadowOpacity: 1,
+  shadowRadius: 3
+})
+
 export default class DaojiaRN extends Component {
 
   render() {
     return (
-      <Router createReducer={reducerCreate} tintColor='red'>
-        <Scene
-          leftButtonTextStyle={{color: 'green'}}
-          backButtonTextStyle={{color: 'red'}}>
-          {/* <Scene key='home' component={Home} title='Home' hideNavBar/> */}
-          <Scene key='login' component={Login} title='Login'/>
-          <Scene key='storeHome' component={StoreHome} title='门店主页'/>
-          <Scene key='tabbar' tabs hideNavBar initial
-            tabBarStyle={styles.tabBarStyle}
-            labelStyle={styles.labelStyle}
-            >
-            <Scene key='tab1' icon={myIcon} component={Home} title='tab #1' initial hideNavBar></Scene>
-            <Scene key='tab2' icon={myIcon} component={TabView} title='tab #2'></Scene>
-            <Scene key='tab3' icon={myIcon} component={TabView} title='tab #3'></Scene>
-            <Scene key='tab4' icon={myIcon} component={TabView} title='tab #4'></Scene>
-            <Scene key='tab5' icon={myIcon} component={TabView} title='tab #5'></Scene>
+      <View style={{flex: 1}}>
+        <Router createReducer={reducerCreate} tintColor='red' getSceneStyle={getSceneStyle}>
+          <Scene
+            leftButtonTextStyle={{color: 'green'}}
+            backButtonTextStyle={{color: 'red'}}>
+            {/* <Scene key='home' component={Home} title='Home' hideNavBar/> */}
+            <Scene key='login' component={Login} title='Login'/>
+            <Scene key='storeHome' component={StoreHome} title='门店主页'/>
+            <Tabs key='tabbar' tabs hideNavBar initial
+              tabBarStyle={styles.tabBarStyle}
+              labelStyle={styles.labelStyle}
+              gestureEnabled={true}
+              activeBackgroundColor='#ddd'
+              >
+              <Scene key='首页' icon={TabIcon} component={Home} title='tab #1' initial hideNavBar></Scene>
+              <Scene key='tab2' icon={TabIcon} component={TabView} title='tab #2'></Scene>
+              <Scene key='tab3' icon={TabIcon} component={TabView} title='tab #3'></Scene>
+              <Scene key='tab4' icon={TabIcon} component={TabView} title='tab #4'></Scene>
+              <Scene key='tab6' icon={TabIcon} component={TabView} title='tab #5'></Scene>
+            </Tabs>
           </Scene>
-        </Scene>
-      </Router>
+        </Router>
+      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    backgroundColor: '#bbb',
-    paddingBottom: 10,
+    backgroundColor: '#eee',
+    paddingBottom: 0,
   },
   labelStyle: {
     fontSize: 14
