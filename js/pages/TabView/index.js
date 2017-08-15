@@ -9,9 +9,9 @@ import {
 
 import Button from 'react-native-button'
 import { Actions } from 'react-native-router-flux'
-import Icon from 'react-native-vector-icons/Entypo'
+// import Icon from 'react-native-vector-icons/Entypo'
 
-const myIcon = (<Icon name="baidu" size={30} color="#900" />)
+// const myIcon = (<Icon name="baidu" size={30} color="#900" />)
 
 export default class TabView extends Component {
   constructor (props) {

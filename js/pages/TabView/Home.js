@@ -25,6 +25,10 @@ export default class Home extends Component {
           onPress={() => Actions.storeHome({data: 'Custom data', title: '门店主页'})}>
           去门店主页
         </Button>
+        <Button style={styles.welcome}
+          onPress={() => Actions.settlement({data: 'Custom data', title: '订单结算'})}>
+          去结算页
+        </Button>
         <Button style={styles.instructions}
           onPress={() => Actions.tabbar()}>
           to TabView

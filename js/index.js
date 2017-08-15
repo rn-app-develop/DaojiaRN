@@ -24,7 +24,8 @@ import Home from './pages/TabView/Home' // 首页
 import Login from './pages/Login' // 登录页
 import TabView from './pages/TabView' // 导航
 import StoreHome from './components/StoreHome' // 导航
-import Icon from 'react-native-vector-icons/Entypo';
+import SettlementView from './pages/SettlementView' // 导航
+// import Icon from 'react-native-vector-icons/Entypo';
 import './utils/interceptors'
 
 import TabIcon from './components/common/TabView/TabIcon'
@@ -58,7 +59,8 @@ export default class DaojiaRN extends Component {
             {/* <Scene key='home' component={Home} title='Home' hideNavBar/> */}
             <Scene key='login' component={Login} title='Login'/>
             <Scene key='storeHome' component={StoreHome} title='门店主页'/>
-            <Tabs key='tabbar' tabs hideNavBar initial
+            <Scene key='settlement' component={SettlementView} title='订单结算'/>
+            <Scene key='tabbar' tabs hideNavBar initial
               tabBarStyle={styles.tabBarStyle}
               labelStyle={styles.labelStyle}
               gestureEnabled={true}
@@ -69,7 +71,7 @@ export default class DaojiaRN extends Component {
               <Scene key='tab3' icon={TabIcon} component={TabView} title='tab #3'></Scene>
               <Scene key='tab4' icon={TabIcon} component={TabView} title='tab #4'></Scene>
               <Scene key='tab6' icon={TabIcon} component={TabView} title='tab #5'></Scene>
-            </Tabs>
+            </Scene>
           </Scene>
         </Router>
       </View>
