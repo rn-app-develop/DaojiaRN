@@ -83,6 +83,6 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
   },
   labelStyle: {
-    fontSize: 14
+    fontSize: 10
   }
 })

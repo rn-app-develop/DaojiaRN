@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 600,
     top: -5,
-    left: 0
+    left: -2
 
     // width: 26,
     // height: 667
