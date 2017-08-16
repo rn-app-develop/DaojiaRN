@@ -28,10 +28,6 @@ import SettlementView from './pages/SettlementView' // 导航
 // import Icon from 'react-native-vector-icons/Entypo';
 import './utils/interceptors'
 
-import TabIcon from './components/common/TabView/TabIcon'
-
-// const myIcon = (<Icon name="back" size={20} color="#900" />)
-// console.log(nav)
 // 创建状态管理器 reducer
 const reducerCreate = params => {
   const defaultReducer = new Reducer(params)
@@ -56,40 +52,12 @@ export default class DaojiaRN extends Component {
           <Scene
             leftButtonTextStyle={{color: 'green'}}
             backButtonTextStyle={{color: 'red'}}>
-            {/* <Scene key='home' component={Home} title='Home' hideNavBar/> */}
             <Scene key='login' component={Login} title='Login'/>
             <Scene key='storeHome' component={StoreHome} title='门店主页'/>
-            <Scene key='settlement' component={SettlementView} title='订单结算'/>
-            <Scene key='tabbar' tabs hideNavBar initial
-              tabBarStyle={styles.tabBarStyle}
-              labelStyle={styles.labelStyle}
-              activeTintColor='#39ac69'
-              inactiveTintColor='#555'
-              activeBackgroundColor='#ddd'
-              gestureEnabled={true}
-              showLabel={true}
-              >
-              <Scene key='home' tabBarLabel='首页' icon={TabIcon} iconType="home" component={Home} title='tab #1' initial hideNavBar></Scene>
-              <Scene key='discover' tabBarLabel='福利' icon={TabIcon} iconType="discover" component={TabView} title='tab #2'></Scene>
-              <Scene key='cart' tabBarLabel='购物车' icon={TabIcon} iconType="cart" component={TabView} title='tab #3'></Scene>
-              <Scene key='order' tabBarLabel='订单' icon={TabIcon} iconType="order" component={TabView} title='tab #4'></Scene>
-              <Scene key='my' tabBarLabel='我的' icon={TabIcon} iconType="my" component={TabView} title='tab #5'></Scene>
-            </Scene>
+            {TabView}
           </Scene>
         </Router>
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  tabBarStyle: {
-    backgroundColor: '#eee',
-    paddingBottom: 0,
-  },
-  labelStyle: {
-    fontSize: 12,
-    // color: '#555',
-    paddingBottom: 5
-  }
-})
