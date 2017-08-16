@@ -63,11 +63,12 @@ export default class DaojiaRN extends Component {
             <Scene key='tabbar' tabs hideNavBar initial
               tabBarStyle={styles.tabBarStyle}
               labelStyle={styles.labelStyle}
-              gestureEnabled={true}
+              activeTintColor='#39ac69'
               activeBackgroundColor='#ddd'
+              gestureEnabled={true}
               >
               {/* <Scene key='首页' icon={TabIcon} component={Home} title='tab #1' initial hideNavBar></Scene> */}
-              <Scene key='首页' icon={TabIcon} labelStyle={{color: '#39ac69'}} iconType="home" component={Home} title='tab #1' initial hideNavBar></Scene>
+              <Scene key='首页' icon={TabIcon} iconType="home" component={Home} title='tab #1' initial hideNavBar></Scene>
               <Scene key='福利' icon={TabIcon} iconType="discover" component={TabView} title='tab #2'></Scene>
               <Scene key='购物车' icon={TabIcon} iconType="cart" component={TabView} title='tab #3'></Scene>
               <Scene key='订单' icon={TabIcon} iconType="order" component={TabView} title='tab #4'></Scene>
