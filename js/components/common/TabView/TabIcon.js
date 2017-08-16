@@ -9,32 +9,30 @@ import {
 
 import nav from '../../../assets/nav4.png'
 
-console.log(nav)
+// console.log(nav)
 
 export default class TabIcon extends Component {
 
   static propTypes = {
-    selected: PropTypes.bool,
-    title: PropTypes.string,
+    focused: PropTypes.bool,
+    iconType: PropTypes.string,
   };
+
   render () {
+    let iconType = this.props.iconType + (this.props.focused ? 'Selected': '')
+    console.log(iconType);
     return (
       <View style={styles.iconWrapper}>
         <Image source={nav}
-          style={styles.icon} ></Image>
+          style={[styles.icon, styles[iconType]]}></Image>
       </View>
     )
-    // return (
-    //   <Text style={{color: this.props.focused ? 'red' : 'black'}}>
-    //     TabIcon {this.props.title}
-    //   </Text>
-    // )
   }
 }
 
 const styles = StyleSheet.create({
   iconWrapper: {
-    width: 20,
+    width: 22,
     height: 20,
     overflow: 'hidden'
   },
@@ -42,10 +40,36 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 24,
     height: 600,
-    top: -5,
-    left: -2
-
-    // width: 26,
-    // height: 667
+    left: -1
+  },
+  home: {
+    top: -256
+  },
+  homeSelected: {
+    top: -6,
+  },
+  discover: {
+    top: -506
+  },
+  discoverSelected: {
+    top: -556
+  },
+  cart: {
+    top: -358,
+  },
+  cartSelected: {
+    top: -108
+  },
+  order: {
+    top: -406
+  },
+  orderSelected: {
+    top: -156
+  },
+  my: {
+    top: -456
+  },
+  mySelected: {
+    top: -206
   }
 })

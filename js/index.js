@@ -66,11 +66,12 @@ export default class DaojiaRN extends Component {
               gestureEnabled={true}
               activeBackgroundColor='#ddd'
               >
-              <Scene key='首页' icon={TabIcon} component={Home} title='tab #1' initial hideNavBar></Scene>
-              <Scene key='tab2' icon={TabIcon} component={TabView} title='tab #2'></Scene>
-              <Scene key='tab3' icon={TabIcon} component={TabView} title='tab #3'></Scene>
-              <Scene key='tab4' icon={TabIcon} component={TabView} title='tab #4'></Scene>
-              <Scene key='tab6' icon={TabIcon} component={TabView} title='tab #5'></Scene>
+              {/* <Scene key='首页' icon={TabIcon} component={Home} title='tab #1' initial hideNavBar></Scene> */}
+              <Scene key='首页' icon={TabIcon} labelStyle={{color: '#39ac69'}} iconType="home" component={Home} title='tab #1' initial hideNavBar></Scene>
+              <Scene key='福利' icon={TabIcon} iconType="discover" component={TabView} title='tab #2'></Scene>
+              <Scene key='购物车' icon={TabIcon} iconType="cart" component={TabView} title='tab #3'></Scene>
+              <Scene key='订单' icon={TabIcon} iconType="order" component={TabView} title='tab #4'></Scene>
+              <Scene key='我的' icon={TabIcon} iconType="my" component={TabView} title='tab #5'></Scene>
             </Scene>
           </Scene>
         </Router>
@@ -85,6 +86,6 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
   },
   labelStyle: {
-    fontSize: 10
+    fontSize: 10,
   }
 })
