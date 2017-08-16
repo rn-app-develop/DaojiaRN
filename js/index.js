@@ -64,15 +64,16 @@ export default class DaojiaRN extends Component {
               tabBarStyle={styles.tabBarStyle}
               labelStyle={styles.labelStyle}
               activeTintColor='#39ac69'
+              inactiveTintColor='#555'
               activeBackgroundColor='#ddd'
               gestureEnabled={true}
+              showLabel={true}
               >
-              {/* <Scene key='首页' icon={TabIcon} component={Home} title='tab #1' initial hideNavBar></Scene> */}
-              <Scene key='首页' icon={TabIcon} iconType="home" component={Home} title='tab #1' initial hideNavBar></Scene>
-              <Scene key='福利' icon={TabIcon} iconType="discover" component={TabView} title='tab #2'></Scene>
-              <Scene key='购物车' icon={TabIcon} iconType="cart" component={TabView} title='tab #3'></Scene>
-              <Scene key='订单' icon={TabIcon} iconType="order" component={TabView} title='tab #4'></Scene>
-              <Scene key='我的' icon={TabIcon} iconType="my" component={TabView} title='tab #5'></Scene>
+              <Scene key='home' tabBarLabel='首页' icon={TabIcon} iconType="home" component={Home} title='tab #1' initial hideNavBar></Scene>
+              <Scene key='discover' tabBarLabel='福利' icon={TabIcon} iconType="discover" component={TabView} title='tab #2'></Scene>
+              <Scene key='cart' tabBarLabel='购物车' icon={TabIcon} iconType="cart" component={TabView} title='tab #3'></Scene>
+              <Scene key='order' tabBarLabel='订单' icon={TabIcon} iconType="order" component={TabView} title='tab #4'></Scene>
+              <Scene key='my' tabBarLabel='我的' icon={TabIcon} iconType="my" component={TabView} title='tab #5'></Scene>
             </Scene>
           </Scene>
         </Router>
@@ -87,6 +88,8 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
   },
   labelStyle: {
-    fontSize: 10,
+    fontSize: 12,
+    // color: '#555',
+    paddingBottom: 5
   }
 })
