@@ -32,7 +32,7 @@ module.exports = {
     alert,
     setImmediate,
     fetch
-  ]
+  ],
   'rules' : {
     'intent': [ERROR, ERROR, {'SwitchCase': 1}],
     'array-bracket-spacing': [ERROR, 'never'],
