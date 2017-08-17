@@ -20,11 +20,11 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
         <Button style={styles.welcome}
-          onPress={() => Actions.storeHome({data: 'Custom data', title: '门店主页'})}>
+          onPress={() => Actions.storeHome({data: 'Custom data'})}>
           去门店主页
         </Button>
         <Button style={styles.welcome}
-          onPress={() => Actions.settlement({data: 'Custom data', title: '订单结算'})}>
+          onPress={() => Actions.settlement({data: 'Custom data'})}>
           去结算页
         </Button>
         <Button style={styles.instructions}

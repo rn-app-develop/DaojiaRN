@@ -32,7 +32,7 @@ import './utils/interceptors'
 const reducerCreate = params => {
   const defaultReducer = new Reducer(params)
   return (state, action) => {
-    console.log('Action:', action)
+    // console.log('Action:', action)
     return defaultReducer(state, action)
   }
 }
@@ -54,6 +54,7 @@ export default class DaojiaRN extends Component {
             backButtonTextStyle={{color: 'red'}}>
             <Scene key='login' component={Login} title='Login'/>
             <Scene key='storeHome' component={StoreHome} title='门店主页'/>
+            <Scene key='settlement' component={SettlementView} title='订单结算'/>
             {TabView}
           </Scene>
         </Router>
