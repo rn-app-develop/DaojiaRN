@@ -9,13 +9,21 @@ import Button from 'react-native-button'
 
 export default class SettleSubmit extends Component {
   render() {
+    // 旧结算页样式
+    // return (
+    //   <View style={styles.settleBottomBar}>
+    //     <Text style={[styles.text, {flex: 1}]}>已优惠¥88</Text>
+    //     <Text style={styles.text}>还需付
+    //       <Text style={{color: '#f55'}}>¥118</Text>
+    //     </Text>
+    //     <Button style={styles.submitBtn}>提交订单</Button>
+    //   </View>
+    // )
+
+    // 新版结算页样式
     return (
       <View style={styles.settleBottomBar}>
-        <Text style={[styles.text, {flex: 1}]}>已优惠¥88</Text>
-        <Text style={styles.text}>还需付
-          <Text style={{color: '#f55'}}>¥118</Text>
-        </Text>
-        <Button style={styles.submitBtn}>提交订单</Button>
+
       </View>
     )
   }

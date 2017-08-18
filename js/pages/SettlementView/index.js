@@ -6,12 +6,13 @@ import {
   View
 } from 'react-native'
 import SettleSubmit from './SettleSubmit'
+import SettleAddress from './SettleAddress'
 
 export default class SettlementView extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>订单结算页</Text>
+        <SettleAddress></SettleAddress>
         <SettleSubmit></SettleSubmit>
       </View>
     )

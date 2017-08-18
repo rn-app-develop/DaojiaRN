@@ -51,10 +51,10 @@ export default class DaojiaRN extends Component {
         <Router createReducer={reducerCreate} tintColor='red' getSceneStyle={getSceneStyle}>
           <Scene
             leftButtonTextStyle={{color: 'green'}}
-            backButtonTextStyle={{color: 'red'}}>
+            backButtonTextStyle={{color: 'white'}}>
             <Scene key='login' component={Login} title='Login'/>
             <Scene key='storeHome' component={StoreHome} title='门店主页'/>
-            <Scene key='settlement' component={SettlementView} title='订单结算'/>
+            <Scene key='settlement' component={SettlementView} title='订单结算' hideNavBar/>
             {TabView}
           </Scene>
         </Router>
