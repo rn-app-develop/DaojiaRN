@@ -44,7 +44,6 @@ const getSceneStyle = () => ({
 })
 
 export default class DaojiaRN extends Component {
-
   render() {
     return (
       <View style={{flex: 1}}>
