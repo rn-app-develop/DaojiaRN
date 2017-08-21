@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component, PureComponent} from 'react'
+import PropTypes from 'prop-types'
 import {
   View,
   Text,
@@ -6,30 +7,40 @@ import {
   StyleSheet
 } from 'react-native'
 
+import FowordArrow from '../../Assets/FowordArrow.png'
+
+class AddressText extends PureComponent {
+  static propTypes = {
+    style: Text.propTypes.style
+  }
+
+  render () {
+    return (
+      <Text
+        style={[{color: '#fff', fontSize: 16}, this.props.style]}>
+        {this.props.children}
+      </Text>
+    )
+  }
+}
+
 export default class SettleAddress extends Component {
   render () {
     return (
       <View style={styles.settleAddress}>
-        {/* <Image style={styles.arrow}></Image> */}
-        <View>
-          {/* 标题箭头 */}
-          <Text style={styles.title}>订单配送至</Text>
-        </View>
+        <AddressText style={styles.title}>订单配送至</AddressText>
         <View style={styles.addressDetail}>
-          {/* 地址图标 */}
-          {/* <Image></Image> */}
           {/* 收货人地址 */}
-          <Text style={styles.addressName}>新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址</Text>
+          <AddressText style={styles.addressName}>新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址</AddressText>
           {/* 切换地址图标 */}
-          <Text style={styles.addressEdit}> {'>'}</Text>
-          {/* <Image></Image> */}
+          <Image style={styles.addressEdit} source={FowordArrow}></Image>
         </View>
         <View style={styles.userInfo}>
           {/* 收货人信息 */}
-          <Text style={styles.text}>收货人姓名</Text>
-          <Text style={styles.text}>收货人电话</Text>
+          <AddressText style={styles.userInfoText}>收货人姓名</AddressText>
+          <AddressText style={styles.userInfoText}>收货人电话</AddressText>
         </View>
-        <Text style={styles.backArrow}>{'<'}</Text>
+        <Image style={styles.backArrow} source={FowordArrow}></Image>
       </View>
     )
   }
@@ -43,17 +54,19 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
   },
   backArrow: {
+    width: 20,
+    height: 20,
     position: 'absolute',
-    color: '#fff',
-    fontSize: 30,
     left: 10,
-    top: 20,
-    backgroundColor: "transparent"
+    top: 30,
+    transform: [
+      {rotateZ: '180deg'}
+    ],
+    // backgroundColor: "#ff0"
   },
   title: {
-    fontSize: 16,
-    color: '#fff',
-    textAlign: 'center'
+    textAlign: 'center',
+    alignSelf: 'center'
   },
   addressDetail: {
     paddingLeft: 25,
@@ -62,23 +75,20 @@ const styles = StyleSheet.create({
   },
   addressName: {
     flex: 1,
-    color: '#fff',
   },
   addressEdit: {
-    width: 55,
-    fontSize: 16,
-    color: '#fff',
-    paddingRight: 25,
-    textAlign: 'right'
-  },
-  text: {
-    fontSize: 14,
-    color: '#fff'
+    width: 16,
+    height: 16,
+    marginLeft: 35,
+    marginRight: 25,
   },
   userInfo: {
     flexDirection: 'row',
     paddingTop: 12,
     paddingLeft: 25,
     paddingBottom: 15
+  },
+  userInfoText: {
+    fontSize: 14
   }
 })
