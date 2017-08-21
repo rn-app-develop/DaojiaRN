@@ -8,7 +8,7 @@
 import {
   AppRegistry
 } from 'react-native'
-import './app/utils/interceptors.js'
+import './app/Utils/interceptors.js'
 import DaojiaRN from './app/index.js'
 // import DaojiaRN from './app/components/StoreHome/index.js'
 // import DaojiaRN from './DaojiaReactNative/App.js'

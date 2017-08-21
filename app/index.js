@@ -20,13 +20,13 @@ import {
   ActionConst
 } from 'react-native-router-flux'
 
-import Home from './pages/TabView/Home' // 首页
-import Login from './pages/Login' // 登录页
-import TabView from './pages/TabView' // 导航
-import StoreHome from './components/StoreHome' // 导航
-import SettlementView from './pages/SettlementView' // 导航
+import Home from './Pages/TabView/Home' // 首页
+import Login from './Pages/Login' // 登录页
+import TabView from './Pages/TabView' // 导航
+import StoreHome from './Components/StoreHome' // 导航
+import SettlementView from './Pages/SettlementView' // 导航
 // import Icon from 'react-native-vector-icons/Entypo';
-import './utils/interceptors'
+import './Utils/interceptors'
 
 // 创建状态管理器 reducer
 const reducerCreate = params => {

@@ -7,7 +7,7 @@ import {
   StyleSheet
 } from 'react-native'
 
-import nav from '../../../assets/nav4.png'
+import nav from '../../../Assets/nav4.png'
 
 // console.log(nav)
 

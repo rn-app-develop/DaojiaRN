@@ -12,7 +12,7 @@ import {
 } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Button from 'react-native-button'
-import Banner from '../../components/common/Banner'
+import Banner from '../../Components/common/Banner'
 
 export default class Home extends Component {
 

@@ -17,7 +17,7 @@ import StoreInfo from './StoreInfo.js'
 import StoreSearch from './StoreSearch.js'
 import AsideMenu from './AsideMenu.js'
 import StoreList from './StoreList.js'
-import { getStoreDetail } from '../../utils/apiHelper.js'
+import { getStoreDetail } from '../../Utils/apiHelper.js'
 
 const winW = Dimensions.get('window').width
 const winH = Dimensions.get('window').height

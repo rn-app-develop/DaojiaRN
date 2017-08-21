@@ -23,7 +23,7 @@ import {
 import Home from './Home' // 首页
 import Content from './Content' // 导航
 
-import TabIcon from '../../components/common/TabView/TabIcon'
+import TabIcon from '../../Components/common/TabView/TabIcon'
 
 const styles = StyleSheet.create({
   tabBarStyle: {
