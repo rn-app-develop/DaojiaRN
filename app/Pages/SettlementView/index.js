@@ -19,6 +19,7 @@ export default class SettlementView extends Component {
   }
 }
 
+// 样式
 const styles = StyleSheet.create({
   container: {
     flex: 1,
