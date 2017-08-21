@@ -9,7 +9,7 @@ import {
   AppRegistry
 } from 'react-native'
 
-import DaojiaRN from './js/index.js'
+import DaojiaRN from './app/index.js'
 // import DaojiaRN from './DaojiaReactNative/App.js'
 
 // export default class DaojiaRN extends Component {
