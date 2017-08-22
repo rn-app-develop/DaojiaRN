@@ -7,8 +7,8 @@ import {
   StyleSheet
 } from 'react-native'
 
-import FowordArrow from '../../Assets/FowordArrow.png'
-import SettlePosition from '../../Assets/SettlePosition.png'
+import FowordArrow from '../../../Assets/FowordArrow.png'
+import SettlePosition from '../../../Assets/SettlePosition.png'
 
 class AddressText extends PureComponent {
   static propTypes = {

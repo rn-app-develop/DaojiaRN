@@ -6,7 +6,7 @@ import {
   StyleSheet
 } from 'react-native'
 import DeliverTag from './DeliverTag'
-import FowordArrow from '../../Assets/FowordArrow.png'
+import FowordArrow from '../../../Assets/FowordArrow.png'
 
 export default class DeliverTime extends Component {
   render () {
