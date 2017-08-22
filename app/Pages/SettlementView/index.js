@@ -15,7 +15,7 @@ export default class SettlementView extends Component {
     return (
       <View style={styles.container}>
         <SettleAddress></SettleAddress>
-        <ScrollView style={{height: 1000}}>
+        <ScrollView style={styles.scrollView}>
           <DeliverTime></DeliverTime>
           <View style={{backgroundColor: '#f00'}}><Text>其它模块</Text></View>
         </ScrollView>
@@ -33,4 +33,9 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
+  scrollView: {
+    height: 1000,
+    top: -30,
+    backgroundColor: 'transparent'
+  }
 });

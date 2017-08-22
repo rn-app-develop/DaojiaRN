@@ -34,14 +34,14 @@ export default class SettleAddress extends Component {
         <View style={styles.addressDetail}>
           {/* 收货人地址 */}
           <Image style={styles.settlePosition} source={SettlePosition}></Image>
-          <AddressText style={styles.addressName}>新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址新版结算页地址</AddressText>
+          <AddressText style={styles.addressName}>北京市大兴区荣京中街朝林广场A座</AddressText>
           {/* 切换地址图标 */}
           <Image style={styles.addressEdit} source={FowordArrow}></Image>
         </View>
         <View style={styles.userInfo}>
           {/* 收货人信息 */}
-          <AddressText style={[styles.userInfoText, {paddingRight: 15}]}>收货人姓名</AddressText>
-          <AddressText style={styles.userInfoText}>收货人电话</AddressText>
+          <AddressText style={[styles.userInfoText, {paddingRight: 15}]}>徐珊</AddressText>
+          <AddressText style={styles.userInfoText}>187****0623</AddressText>
         </View>
         <Image style={styles.backArrow} source={FowordArrow}></Image>
       </View>
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     height: 20,
     position: 'absolute',
     left: 10,
-    top: 30,
+    top: 35,
     transform: [
       {rotateZ: '180deg'}
     ],
@@ -71,13 +71,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center'
   },
   settlePosition: {
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
     marginRight: 10,
     marginTop: 3,
   },
   addressDetail: {
-    paddingLeft: 25,
+    paddingHorizontal: 25,
     paddingTop: 15,
     flexDirection: 'row',
   },
@@ -88,14 +88,12 @@ const styles = StyleSheet.create({
     width: 16,
     height: 16,
     marginLeft: 35,
-    marginRight: 25,
     marginTop: 3,
   },
   userInfo: {
     flexDirection: 'row',
-    paddingTop: 12,
-    paddingLeft: 55,
-    paddingBottom: 15
+    paddingVertical: 12,
+    paddingLeft: 55
   },
   userInfoText: {
     fontSize: 14
