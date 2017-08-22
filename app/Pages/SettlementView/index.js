@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native'
 import SettleSubmit from './SettleSubmit'
 import SettleAddress from './SettleAddress'
