@@ -9,7 +9,7 @@ import {
 import SettleSubmit from './SettleSubmit'
 import SettleAddress from './SettleAddress'
 import DeliverTime from './DeliverTime'
-
+import SettleContent from './SettleContent'
 export default class SettlementView extends Component {
   render() {
     return (
@@ -17,7 +17,7 @@ export default class SettlementView extends Component {
         <SettleAddress></SettleAddress>
         <ScrollView style={styles.scrollView}>
           <DeliverTime></DeliverTime>
-          <View style={{backgroundColor: '#f00'}}><Text>其它模块</Text></View>
+          <SettleContent></SettleContent>
         </ScrollView>
         <SettleSubmit></SettleSubmit>
       </View>
@@ -34,8 +34,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   scrollView: {
-    height: 1000,
     top: -30,
-    backgroundColor: 'transparent'
+    marginHorizontal: 10,
   }
 });
