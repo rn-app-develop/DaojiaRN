@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     paddingTop: 35,
     backgroundColor: '#49b34d',
     paddingBottom: 30,
+    // 阴影
   },
   backArrow: {
     width: 20,

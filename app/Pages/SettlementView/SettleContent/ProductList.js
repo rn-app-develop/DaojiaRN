@@ -4,12 +4,27 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import ProductItem from './ProductItem'
+
 export default class ProductList extends Component {
   render() {
+    let list = this.props.productInfo.map((val) => {
+      return (
+        <ProductItem key={val.skuId} item={val}>
+        </ProductItem>
+      )
+    })
     return (
       <View>
-        <Text>商品列表</Text>
+        <View>
+          {list}
+        </View>
+        <Text>共{list.length}件/{this.props.totalWeight}kg</Text>
       </View>
     );
   }
 }
+
+let styles = StyleSheet.create({
+
+})

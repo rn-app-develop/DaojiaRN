@@ -20,7 +20,7 @@ export default class TabIcon extends Component {
 
   render () {
     let iconType = this.props.iconType + (this.props.focused ? 'Selected': '')
-    console.log(iconType);
+    // console.log(iconType);
     return (
       <View style={styles.iconWrapper}>
         <Image source={nav}

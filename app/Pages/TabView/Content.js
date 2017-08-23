@@ -28,7 +28,7 @@ export default class TabView extends Component {
   }
 
   componentWillMount () {
-    this.fetchData()
+    // this.fetchData()
   }
 
   fetchData () {
