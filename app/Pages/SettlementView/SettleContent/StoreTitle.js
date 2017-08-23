@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   View,
   Text,
   StyleSheet,
 } from 'react-native';
 
-export default class SettleContent extends Component {
+export default class SettleContent extends PureComponent {
   render() {
     return (
       <View style={styles.storeTitle}>

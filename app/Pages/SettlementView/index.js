@@ -10,7 +10,10 @@ import SettleSubmit from './SettleSubmit'
 import SettleAddress from './SettleAddress'
 import DeliverTime from './DeliverTime'
 import SettleContent from './SettleContent'
+import SettleData from './_TestData'
+
 export default class SettlementView extends Component {
+  console.log(SettleData);
   render() {
     return (
       <View style={styles.container}>
@@ -29,9 +32,7 @@ export default class SettlementView extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#f4f4f4',
   },
   scrollView: {
     top: -30,
