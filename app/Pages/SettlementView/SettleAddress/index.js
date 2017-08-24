@@ -9,22 +9,7 @@ import {
 
 import FowordArrow from '../../../Assets/FowordArrow.png'
 import SettlePosition from '../../../Assets/SettlePosition.png'
-
-class AddressText extends PureComponent {
-  static propTypes = {
-    style: Text.propTypes.style
-  }
-
-  render () {
-    return (
-      <Text
-        style={[{color: '#fff', fontSize: 16,
-        lineHeight: 20}, this.props.style]}>
-        {this.props.children}
-      </Text>
-    )
-  }
-}
+import AddressText from './AddressText'
 
 export default class SettleAddress extends Component {
   render () {

@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react';
 import {
   View,
-  Text,
   Image,
   StyleSheet,
 } from 'react-native';
+import ContentText from './ContentText'
+import RMB from './RMB'
 
 export default class ProductItem extends PureComponent {
   render() {
@@ -13,8 +14,8 @@ export default class ProductItem extends PureComponent {
       <View style={styles.productItem} >
         <Image style={styles.productImg} source={{uri: item.img}}></Image>
         <View style={styles.productInfo}>
-          <Text>{item.name}</Text>
-          <Text>{item.money / 100}</Text>
+          <ContentText numberOfLines={1}>{item.name}</ContentText>
+          <ContentText><RMB></RMB>{item.money / 100} × {item.quantity}</ContentText>
         </View>
       </View>
     );
@@ -35,7 +36,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#f4f4f4'
   },
   productInfo: {
+    flex: 1,
     justifyContent: 'space-between',
-    marginVertical: 4,
+    marginVertical: 2,
   }
 })

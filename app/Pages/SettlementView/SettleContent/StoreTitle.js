@@ -4,13 +4,14 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import ContentText from './ContentText'
 
 export default class SettleContent extends PureComponent {
   render() {
     return (
       <View style={styles.storeTitle}>
         <View style={[styles.doubleLine, {marginLeft: 15}]}></View>
-        <Text style={styles.storeName}>沃尔玛店</Text>
+        <ContentText style={{fontSize: 15}}>沃尔玛店</ContentText>
         <View style={[styles.doubleLine, {marginRight: 15}]}></View>
       </View>
     );
@@ -32,9 +33,4 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: '#e8e8e8',
   },
-  storeName: {
-    fontSize: 15,
-    color: '#333'
-  }
-
 })
