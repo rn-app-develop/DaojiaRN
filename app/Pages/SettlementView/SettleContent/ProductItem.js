@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import ContentText from './ContentText'
 import RMB from './RMB'
+import ProductPrice from './ProductPrice'
 
 export default class ProductItem extends PureComponent {
   render() {
@@ -15,7 +16,7 @@ export default class ProductItem extends PureComponent {
         <Image style={styles.productImg} source={{uri: item.img}}></Image>
         <View style={styles.productInfo}>
           <ContentText numberOfLines={1}>{item.name}</ContentText>
-          <ContentText><RMB></RMB>{item.money / 100} × {item.quantity}</ContentText>
+          <ProductPrice item={item}></ProductPrice>
         </View>
       </View>
     );
@@ -26,7 +27,6 @@ const styles = StyleSheet.create({
   productItem: {
     flexDirection: 'row',
     marginBottom: 20,
-    marginHorizontal: 15,
     overflow: 'hidden'
   },
   productImg: {

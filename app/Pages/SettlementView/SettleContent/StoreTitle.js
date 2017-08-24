@@ -10,9 +10,9 @@ export default class SettleContent extends PureComponent {
   render() {
     return (
       <View style={styles.storeTitle}>
-        <View style={[styles.doubleLine, {marginLeft: 15}]}></View>
+        <View style={[styles.doubleLine, {marginRight: 12}]}></View>
         <ContentText style={{fontSize: 15}}>沃尔玛店</ContentText>
-        <View style={[styles.doubleLine, {marginRight: 15}]}></View>
+        <View style={[styles.doubleLine, {marginLeft: 12}]}></View>
       </View>
     );
   }
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
   doubleLine: {
     flex: 1,
     height: 3,
-    marginHorizontal: 12,
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderColor: '#e8e8e8',

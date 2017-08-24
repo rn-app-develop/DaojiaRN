@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import {
   View,
   Text,
-  Image,
   StyleSheet
 } from 'react-native'
 import DeliverTag from './DeliverTag'
-import FowordArrow from '../../../Assets/FowordArrow.png'
-
+import IconArrow from '../IconArrow'
 export default class DeliverTime extends Component {
   render () {
     return (
@@ -15,7 +13,7 @@ export default class DeliverTime extends Component {
         <DeliverTag></DeliverTag>
         <View style={styles.deliverTimeContent}>
           <Text style={styles.deliverTimeText}>立即送达[预计16:38]</Text>
-          <Image style={styles.deliverTimeArrow} source={FowordArrow}></Image>
+          <IconArrow style={styles.deliverTimeArrow}></IconArrow>
         </View>
       </View>
     )
@@ -48,8 +46,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   deliverTimeArrow:{
-    width: 15,
-    height: 15,
     marginLeft: 10,
     tintColor: '#2486ff'
   }

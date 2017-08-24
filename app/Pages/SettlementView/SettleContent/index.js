@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   settleContentWrapper: {
     backgroundColor: '#fff',
     borderRadius: 5,
+    paddingHorizontal: 15,
     // height: 180,
   },
 

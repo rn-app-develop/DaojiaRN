@@ -7,10 +7,9 @@ import {
   StyleSheet
 } from 'react-native'
 
-import FowordArrow from '../../../Assets/FowordArrow.png'
 import SettlePosition from '../../../Assets/SettlePosition.png'
 import AddressText from './AddressText'
-
+import IconArrow from '../IconArrow'
 export default class SettleAddress extends Component {
   render () {
     return (
@@ -21,14 +20,14 @@ export default class SettleAddress extends Component {
           <Image style={styles.settlePosition} source={SettlePosition}></Image>
           <AddressText style={styles.addressName}>北京市大兴区荣京中街朝林广场A座</AddressText>
           {/* 切换地址图标 */}
-          <Image style={styles.addressEdit} source={FowordArrow}></Image>
+          <IconArrow style={styles.addressEdit} ></IconArrow>
         </View>
         <View style={styles.userInfo}>
           {/* 收货人信息 */}
           <AddressText style={[styles.userInfoText, {paddingRight: 15}]}>徐珊</AddressText>
           <AddressText style={styles.userInfoText}>187****0623</AddressText>
         </View>
-        <Image style={styles.backArrow} source={FowordArrow}></Image>
+        <IconArrow direction="left" style={styles.backArrow} ></IconArrow>
       </View>
     )
   }
@@ -48,9 +47,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 10,
     top: 35,
-    transform: [
-      {rotateZ: '180deg'}
-    ],
+
   },
   title: {
     textAlign: 'center',

@@ -1,12 +1,13 @@
-export default {
+export default
+{
 	"code": "0",
 	"msg": "成功",
 	"result": {
-		"unique": "d011da41-30b0-461e-bbde-c21a58f309ad",
-		"serverSign": "4024696D597F53B599CF6EAB75E792B4",
-		"totalMoney": "￥244.29",
-		"freightFee": 350,
-		"manJianMoney": 25229,
+		"unique": "3463b4c8-1217-44fa-8932-1d709f2dca88",
+		"serverSign": "703B0F5DCF0577E27418C790DE81D6E5",
+		"totalMoney": "￥43.18",
+		"freightFee": 700,
+		"manJianMoney": 3568,
 		"newModules": [{
 			"moduleKey": "receiptAddress",
 			"title": "收货地址",
@@ -25,66 +26,133 @@ export default {
 			"title": "配送时间",
 			"data": {
 				"pushTimeFlag": true,
-				"nonPushTimeText": "立即送达 [预计 11:51]",
+				"nonPushTimeText": "立即送达 [预计 12:39]",
 				"promiseDateRespItems": [{
 					"promiseDateText": "今天",
 					"promiseDate": "2017-08-24",
 					"promiseType": "2",
 					"promiseTimeRespItems": [{
-						"promiseTimeText": "立即送达 (预计 11:51)",
-						"promiseStartTime": "11:57",
-						"promiseEndTime": "11:57",
-						"steppedFreight": "3.5元运费",
-						"expectedDeliveryTime": "2017-08-24 11:51:00",
+						"promiseTimeText": "立即送达 (预计 12:39)",
+						"promiseStartTime": "12:57",
+						"promiseEndTime": "12:57",
+						"steppedFreight": "7元运费",
+						"expectedDeliveryTime": "2017-08-24 12:39:00",
 						"deliveryTip": "立即送达",
 						"dingshida": false
-					}, {
-						"promiseTimeText": "12:00-13:00",
-						"promiseStartTime": "12:00",
-						"promiseEndTime": "13:00",
-						"steppedFreight": "3.5元运费",
-						"dingshida": true
 					}, {
 						"promiseTimeText": "13:00-14:00",
 						"promiseStartTime": "13:00",
 						"promiseEndTime": "14:00",
-						"steppedFreight": "3.5元运费",
+						"steppedFreight": "7元运费",
 						"dingshida": true
 					}, {
 						"promiseTimeText": "14:00-15:00",
 						"promiseStartTime": "14:00",
 						"promiseEndTime": "15:00",
-						"steppedFreight": "3.5元运费",
+						"steppedFreight": "7元运费",
 						"dingshida": true
 					}, {
 						"promiseTimeText": "15:00-16:00",
 						"promiseStartTime": "15:00",
 						"promiseEndTime": "16:00",
-						"steppedFreight": "3.5元运费",
+						"steppedFreight": "7元运费",
 						"dingshida": true
 					}, {
 						"promiseTimeText": "16:00-17:00",
 						"promiseStartTime": "16:00",
 						"promiseEndTime": "17:00",
-						"steppedFreight": "3.5元运费",
+						"steppedFreight": "7元运费",
 						"dingshida": true
 					}, {
 						"promiseTimeText": "17:00-18:00",
 						"promiseStartTime": "17:00",
 						"promiseEndTime": "18:00",
-						"steppedFreight": "3.5元运费",
+						"steppedFreight": "7元运费",
 						"dingshida": true
 					}, {
 						"promiseTimeText": "18:00-19:00",
 						"promiseStartTime": "18:00",
 						"promiseEndTime": "19:00",
-						"steppedFreight": "3.5元运费",
+						"steppedFreight": "7元运费",
 						"dingshida": true
 					}, {
 						"promiseTimeText": "19:00-20:00",
 						"promiseStartTime": "19:00",
 						"promiseEndTime": "20:00",
-						"steppedFreight": "3.5元运费",
+						"steppedFreight": "7元运费",
+						"dingshida": true
+					}]
+				}, {
+					"promiseDateText": "明天",
+					"promiseDate": "2017-08-25",
+					"promiseType": "2",
+					"promiseTimeRespItems": [{
+						"promiseTimeText": "营业即送 (约10:00送达)",
+						"promiseStartTime": "10:00",
+						"promiseEndTime": "10:00",
+						"steppedFreight": "5元运费",
+						"expectedDeliveryTime": "2017-08-25 10:00:00",
+						"deliveryTip": "营业即送",
+						"dingshida": false
+					}, {
+						"promiseTimeText": "10:00-11:00",
+						"promiseStartTime": "10:00",
+						"promiseEndTime": "11:00",
+						"steppedFreight": "5元运费",
+						"dingshida": true
+					}, {
+						"promiseTimeText": "11:00-12:00",
+						"promiseStartTime": "11:00",
+						"promiseEndTime": "12:00",
+						"steppedFreight": "5元运费",
+						"dingshida": true
+					}, {
+						"promiseTimeText": "12:00-13:00",
+						"promiseStartTime": "12:00",
+						"promiseEndTime": "13:00",
+						"steppedFreight": "5元运费",
+						"dingshida": true
+					}, {
+						"promiseTimeText": "13:00-14:00",
+						"promiseStartTime": "13:00",
+						"promiseEndTime": "14:00",
+						"steppedFreight": "5元运费",
+						"dingshida": true
+					}, {
+						"promiseTimeText": "14:00-15:00",
+						"promiseStartTime": "14:00",
+						"promiseEndTime": "15:00",
+						"steppedFreight": "5元运费",
+						"dingshida": true
+					}, {
+						"promiseTimeText": "15:00-16:00",
+						"promiseStartTime": "15:00",
+						"promiseEndTime": "16:00",
+						"steppedFreight": "5元运费",
+						"dingshida": true
+					}, {
+						"promiseTimeText": "16:00-17:00",
+						"promiseStartTime": "16:00",
+						"promiseEndTime": "17:00",
+						"steppedFreight": "5元运费",
+						"dingshida": true
+					}, {
+						"promiseTimeText": "17:00-18:00",
+						"promiseStartTime": "17:00",
+						"promiseEndTime": "18:00",
+						"steppedFreight": "5元运费",
+						"dingshida": true
+					}, {
+						"promiseTimeText": "18:00-19:00",
+						"promiseStartTime": "18:00",
+						"promiseEndTime": "19:00",
+						"steppedFreight": "5元运费",
+						"dingshida": true
+					}, {
+						"promiseTimeText": "19:00-20:00",
+						"promiseStartTime": "19:00",
+						"promiseEndTime": "20:00",
+						"steppedFreight": "5元运费",
 						"dingshida": true
 					}]
 				}]
@@ -96,38 +164,7 @@ export default {
 				"defaultCodeSuccessFlag": true,
 				"codeListSuccessFlag": true,
 				"promoteType": true,
-				"vouVO": {
-					"vourcherCode": "f11dc93085a64be5b7bf3bd179a51c13#419030980",
-					"firstPlaceVoucherCode": "f11dc93085a64be5b7bf3bd179a51c13#419030980",
-					"discountMoney": 1200
-				},
 				"voucherListVO": [{
-					"userPin": "WX_116te75afd7c",
-					"couponName": "华冠88折优惠",
-					"couponCode": "f11dc93085a64be5b7bf3bd179a51c13#419030980",
-					"orgCode": 71472,
-					"venderName": "华冠88折优惠",
-					"beginTime": "2017-08-24 10:53:54",
-					"endTime": "2017-08-25 23:59:59",
-					"createTime": "2017-08-24 10:53:54",
-					"modifyTime": "2017-08-24 10:53:54",
-					"couponType": 5,
-					"source": 1,
-					"state": 1,
-					"quota": 880,
-					"minOrderAmount": 2900,
-					"limitType": "VENDER",
-					"beginTimeStr": "2017.08.24",
-					"endTimeStr": "2017.08.25",
-					"maxOrderAmount": 10000,
-					"couponTitle": "华冠88折优惠",
-					"couponTypeDesc": "折扣券",
-					"limitRule": "满29~100元享折扣",
-					"avilableDate": "2017.08.24-2017.08.25",
-					"amount": "8.8",
-					"amountUnit": "折",
-					"use": "AVAILABLE"
-				}, {
 					"userPin": "WX_116te75afd7c",
 					"couponName": "仅限于基础运费",
 					"couponCode": "73e9160e2e1e4958b504a4be382b94ea#419030980",
@@ -144,7 +181,7 @@ export default {
 					"limitType": "VENDER",
 					"beginTimeStr": "2017.08.24",
 					"endTimeStr": "2017.09.03",
-					"unavailableReason": "1、拉萨市、仅限在拉萨市区域商家使用\n2、仅限订单运费金额非0时使用\n3、当前商家不支持使用",
+					"unavailableReason": "1、拉萨市、仅限在拉萨市区域商家使用\n2、当前商家不支持使用",
 					"couponTitle": "仅限于基础运费",
 					"couponTypeDesc": "免运费券",
 					"limitRule": "无门槛",
@@ -171,7 +208,7 @@ export default {
 					"limitType": "VENDER",
 					"beginTimeStr": "2017.08.24",
 					"endTimeStr": "2017.08.29",
-					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、仅限订单运费金额非0时使用\n3、当前门店不支持使用",
+					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、当前门店不支持使用",
 					"couponTitle": "仅限于基础运费",
 					"couponTypeDesc": "免运费券",
 					"limitRule": "无门槛",
@@ -198,7 +235,7 @@ export default {
 					"limitType": "VENDER",
 					"beginTimeStr": "2017.08.23",
 					"endTimeStr": "2017.08.28",
-					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、仅限订单运费金额非0时使用\n3、当前门店不支持使用",
+					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、当前门店不支持使用",
 					"couponTitle": "仅限于基础运费",
 					"couponTypeDesc": "免运费券",
 					"limitRule": "无门槛",
@@ -225,7 +262,7 @@ export default {
 					"limitType": "VENDER",
 					"beginTimeStr": "2017.08.23",
 					"endTimeStr": "2017.08.28",
-					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、仅限订单运费金额非0时使用\n3、当前门店不支持使用",
+					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、当前门店不支持使用",
 					"couponTitle": "仅限于基础运费",
 					"couponTypeDesc": "免运费券",
 					"limitRule": "无门槛",
@@ -250,7 +287,7 @@ export default {
 					"limitType": "VENDER",
 					"beginTimeStr": "2017.08.17",
 					"endTimeStr": "2017.08.27",
-					"unavailableReason": "1、拉萨市、仅限在拉萨市区域商家使用\n2、仅限订单运费金额非0时使用\n3、当前商家不支持使用",
+					"unavailableReason": "1、拉萨市、仅限在拉萨市区域商家使用\n2、当前商家不支持使用",
 					"couponTitle": "仅限于基础运费",
 					"couponTypeDesc": "免运费券",
 					"limitRule": "无门槛",
@@ -275,7 +312,7 @@ export default {
 					"limitType": "VENDER",
 					"beginTimeStr": "2017.08.24",
 					"endTimeStr": "2017.08.29",
-					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、仅限订单运费金额非0时使用\n3、当前商家不支持使用",
+					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、当前商家不支持使用",
 					"couponTitle": "仅限于基础运费",
 					"couponTypeDesc": "运费券",
 					"limitRule": "无门槛",
@@ -300,7 +337,7 @@ export default {
 					"limitType": "VENDER",
 					"beginTimeStr": "2017.08.23",
 					"endTimeStr": "2017.08.28",
-					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、仅限订单运费金额非0时使用\n3、当前商家不支持使用",
+					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、当前商家不支持使用",
 					"couponTitle": "仅限于基础运费",
 					"couponTypeDesc": "运费券",
 					"limitRule": "无门槛",
@@ -325,7 +362,7 @@ export default {
 					"limitType": "VENDER",
 					"beginTimeStr": "2017.08.23",
 					"endTimeStr": "2017.08.28",
-					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、仅限订单运费金额非0时使用\n3、当前商家不支持使用",
+					"unavailableReason": "1、上海市、拉萨市、仅限在上海市、拉萨市区域商家使用\n2、当前商家不支持使用",
 					"couponTitle": "仅限于基础运费",
 					"couponTypeDesc": "运费券",
 					"limitRule": "无门槛",
@@ -362,6 +399,35 @@ export default {
 					"amount": "153",
 					"amountUnit": "元",
 					"use": "UNAVAILABLE"
+				}, {
+					"userPin": "WX_116te75afd7c",
+					"couponName": "部分门店",
+					"couponCode": "36c2a43544e645b5ad21442f626629b4#419030980",
+					"orgCode": 71598,
+					"venderName": "部分门店",
+					"stationNo": "10006266,10050842,11053711,11678726,11671583,10019418,10006391,10006396",
+					"stationName": "测试店铺0515部分门店券",
+					"beginTime": "2017-05-24 00:00:00",
+					"endTime": "2018-03-31 23:59:59",
+					"createTime": "2017-06-05 10:16:18",
+					"modifyTime": "2017-06-05 10:16:18",
+					"couponType": 1,
+					"source": 2,
+					"state": 1,
+					"quota": 15300,
+					"minOrderAmount": 261100,
+					"limitType": "VENDER",
+					"beginTimeStr": "2017.05.24",
+					"endTimeStr": "2018.03.31",
+					"unavailableReason": "1、所购商品(满/立减后)金额需满2611元\n2、当前门店不支持使用",
+					"isFans": 1,
+					"couponTitle": "部分门店",
+					"couponTypeDesc": "满减券",
+					"limitRule": "满2611元可用",
+					"avilableDate": "2017.05.24-2018.03.31",
+					"amount": "153",
+					"amountUnit": "元",
+					"use": "UNAVAILABLE"
 				}]
 			}
 		}, {
@@ -379,146 +445,140 @@ export default {
 		}, {
 			"moduleKey": "productInfo",
 			"data": [{
-				"skuId": 2009496978,
-				"name": "【满100减10】九三非转基因大豆油（一级）1.8L",
-				"quantity": 1,
-				"img": "https://img30.360buyimg.com/n7/jfs/t7783/235/554172472/358465/65d7d397/599435a1N3a33189f.png",
-				"money": 2690,
-				"promotionList": [{
-					"price": 2690,
-					"quantity": 1,
-					"promotionType": 1,
-					"storePrice": 2690
-				}],
-				"storeMoney": 2690
-			}, {
-				"skuId": 2009497001,
-				"name": "【满100减10】九三非转基因大豆油（一级）5L",
-				"quantity": 1,
-				"img": "https://img30.360buyimg.com/n7/jfs/t7360/352/550143735/84473/b11ae759/5994370eN2df0d17f.jpg",
-				"money": 5990,
-				"promotionList": [{
-					"price": 5990,
-					"quantity": 1,
-					"promotionType": 1,
-					"storePrice": 5990
-				}],
-				"storeMoney": 5990
-			}, {
-				"skuId": 2009496989,
-				"name": "【满100减10】九三非转基因大豆油（三级）1.8L",
-				"quantity": 1,
-				"img": "https://img30.360buyimg.com/n7/jfs/t7300/199/527260667/361776/c60d19ed/59943644Nb2c26f84.png",
-				"money": 2690,
-				"promotionList": [{
-					"price": 2690,
-					"quantity": 1,
-					"promotionType": 1,
-					"storePrice": 2690
-				}],
-				"storeMoney": 2690
-			}, {
-				"skuId": 2004865974,
-				"name": "长乐有机面粉（饺子粉）1.5kg/袋",
-				"quantity": 1,
-				"img": "https://img30.360buyimg.com/n7/jfs/t3688/240/498309722/151778/2131f6e/580ef182N7dc42d9b.jpg",
-				"money": 3900,
-				"promotionList": [{
-					"price": 3900,
-					"quantity": 1,
-					"promotionType": 1,
-					"storePrice": 3900
-				}],
-				"storeMoney": 3900
-			}, {
-				"skuId": 1487931775,
-				"name": "【满39减10】得利斯培根火腿350g/袋",
-				"quantity": 1,
-				"img": "https://img30.360buyimg.com/n7/jfs/t493/320/394807587/198750/ef81e4d4/54657815N4f18ea4c.jpg",
-				"money": 1490,
-				"promotionList": [{
-					"price": 1490,
-					"quantity": 1,
-					"promotionType": 1,
-					"storePrice": 1490
-				}],
-				"storeMoney": 1490
-			}, {
-				"skuId": 2000000307,
-				"name": "【满39减10】得利斯松仁小肚300g/袋",
-				"quantity": 1,
-				"img": "https://img30.360buyimg.com/n7/jfs/t895/286/935562411/381107/87883694/555964f7N5e413df4.jpg",
-				"money": 1590,
-				"promotionList": [{
-					"price": 1590,
-					"quantity": 1,
-					"promotionType": 1,
-					"storePrice": 1590
-				}],
-				"storeMoney": 1590
-			}, {
-				"skuId": 2008299092,
-				"name": "精品 肋排  约1kg/份",
+				"skuId": 2004314647,
+				"name": "青尖椒300g/份",
 				"quantity": 2,
-				"img": "https://img30.360buyimg.com/n7/jfs/t874/60/457873138/270054/57d7d0b6/552dd182N897ced28.jpg",
-				"money": 7920,
+				"img": "https://img30.360buyimg.com/n7/jfs/t796/285/928875567/92755/ce6b0261/55597dd4N14220d36.jpg",
+				"money": 400,
 				"promotionList": [{
-					"price": 3960,
-					"quantity": 2,
-					"promotionType": 4,
-					"storePrice": 6600
-				}],
-				"storeMoney": 13200
-			}, {
-				"skuId": 2007943612,
-				"name": "维多利亚葡萄约500g/份",
-				"quantity": 1,
-				"img": "https://img30.360buyimg.com/n7/jfs/t5983/179/151678051/70514/4fd43d91/5925429eN5af53d3c.jpg",
-				"money": 459,
-				"promotionList": [{
-					"price": 459,
+					"price": 300,
 					"quantity": 1,
 					"promotionType": 1,
-					"storePrice": 459
+					"storePrice": 300
+				}, {
+					"price": 100,
+					"quantity": 1,
+					"promotionType": 4,
+					"storePrice": 300
 				}],
-				"storeMoney": 459
+				"storeMoney": 600
+			}, {
+				"skuId": 2004060340,
+				"name": "青皮冬瓜约400~500g/份",
+				"quantity": 3,
+				"img": "https://img30.360buyimg.com/n7/jfs/t1657/334/998426035/153446/7f9ed137/55bf02cbN66415a07.jpg",
+				"money": 860,
+				"promotionList": [{
+					"price": 380,
+					"quantity": 2,
+					"promotionType": 1,
+					"storePrice": 380
+				}, {
+					"price": 100,
+					"quantity": 1,
+					"promotionType": 4,
+					"storePrice": 380
+				}],
+				"storeMoney": 1140
+			}, {
+				"skuId": 2004131884,
+				"name": "香菜约50g/份",
+				"quantity": 3,
+				"img": "https://img30.360buyimg.com/n7/jfs/t2272/84/544935293/228874/c7133f7f/56163fd7N014d5ae6.jpg",
+				"money": 410,
+				"promotionList": [{
+					"price": 200,
+					"quantity": 2,
+					"promotionType": 1,
+					"storePrice": 200
+				}, {
+					"price": 10,
+					"quantity": 1,
+					"promotionType": 4,
+					"storePrice": 200
+				}],
+				"storeMoney": 600
+			}, {
+				"skuId": 2004861071,
+				"name": "大葱约150g/根",
+				"quantity": 3,
+				"img": "https://img30.360buyimg.com/n7/jfs/t2074/120/523952036/188909/c0408791/5616401dNbf4f1cf4.jpg",
+				"money": 498,
+				"promotionList": [{
+					"price": 199,
+					"quantity": 2,
+					"promotionType": 1,
+					"storePrice": 199
+				}, {
+					"price": 100,
+					"quantity": 1,
+					"promotionType": 4,
+					"storePrice": 199
+				}],
+				"storeMoney": 597
+			}, {
+				"skuId": 2003987128,
+				"name": "新鲜胡萝卜约250g/份",
+				"quantity": 4,
+				"img": "https://img30.360buyimg.com/n7/jfs/t1216/198/111721781/186793/3b4bf8b9/54ffdb64N535649a6.jpg",
+				"money": 850,
+				"promotionList": [{
+					"price": 250,
+					"quantity": 3,
+					"promotionType": 1,
+					"storePrice": 250
+				}, {
+					"price": 100,
+					"quantity": 1,
+					"promotionType": 4,
+					"storePrice": 250
+				}],
+				"storeMoney": 1000
+			}, {
+				"skuId": 2004077888,
+				"name": "鲜鸡蛋4个/份",
+				"quantity": 5,
+				"img": "https://img30.360buyimg.com/n7/jfs/t3304/104/2276261000/667035/37d82f89/57df9a50N52cfb58b.png",
+				"money": 1750,
+				"promotionList": [{
+					"price": 350,
+					"quantity": 5,
+					"promotionType": 1,
+					"storePrice": 350
+				}],
+				"storeMoney": 1750
 			}]
 		}, {
 			"moduleKey": "moneyInfo",
 			"data": [{
 				"name": "商品金额",
-				"value": "￥267.29",
+				"value": "￥47.68",
 				"color": "#0F0F0F"
 			}, {
 				"name": "配送费",
-				"value": "￥9",
+				"value": "￥7.5",
 				"color": "#0F0F0F",
 				"deliverType": "",
 				"title": "配送费说明",
-				"descText": "超重运费：超重7kg运费3.5元(超过6kg收取0.5元/kg超重运费)<br/>包装费：本订单收取包装袋费用0.5元",
+				"descText": "动态运费：因天气、运力等暂时加收运费2元<br/>包装费：本订单收取包装袋费用0.5元",
 				"childMoneyList": [{
 					"name": "基础运费",
 					"value": "￥5"
 				}, {
-					"name": "超重运费",
-					"value": "￥3.5"
+					"name": "动态运费",
+					"value": "￥2"
 				}, {
 					"name": "包装费",
 					"value": "￥0.5"
 				}],
+				"dynamicFreightDesc": "因天气、运力等暂时加收运费2元",
 				"periodFreightDesc": ""
 			}]
 		}, {
 			"moduleKey": "disMoneyInfo",
 			"data": [{
-				"name": "运费优惠",
-				"value": "-￥5",
-				"color": "#ff5757",
-				"flagColor": "#1ABBFF",
-				"flagText": "运费"
-			}, {
 				"name": "满减优惠",
-				"value": "-￥15",
+				"value": "-￥12",
 				"color": "#ff5757",
 				"flagColor": "#6CC272",
 				"flagText": "满减"
@@ -535,14 +595,14 @@ export default {
 		}, {
 			"moduleKey": "submitInfo",
 			"title": "提交订单",
-			"data": "立即支付  ￥244.29元"
+			"data": "立即支付  ￥43.18元"
 		}],
 		"settleType": "0",
-		"totalDiscount": "￥32",
-		"totalCost": "￥276.29",
-		"totalWeight": "13.25",
+		"totalDiscount": "￥12",
+		"totalCost": "￥55.18",
+		"totalWeight": "5.95",
 		"distributionType": "1",
-		"msg": ""
+		"msg": "(秒杀不与满减同享)"
 	},
 	"success": true
 }
