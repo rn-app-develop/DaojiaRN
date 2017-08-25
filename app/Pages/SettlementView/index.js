@@ -37,6 +37,8 @@ export default class SettlementView extends Component {
           <SettleContent
             productInfo={modulesMap.get('productInfo')}
             totalWeight={settleData.totalWeight}
+            moneyInfo={modulesMap.get('moneyInfo')}
+            disMoneyInfo={modulesMap.get('disMoneyInfo')}
             >
           </SettleContent>
         </ScrollView>

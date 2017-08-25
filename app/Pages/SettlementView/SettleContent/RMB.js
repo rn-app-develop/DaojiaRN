@@ -6,10 +6,10 @@ import {
 
 export default class RMB extends PureComponent {
   render() {
-    let props = this.props
+    let { style } = this.props
     return (
       <Text
-        style={[styles.text, props.style]} >¥</Text>
+        style={[styles.text, style]} >¥</Text>
     );
   }
 }

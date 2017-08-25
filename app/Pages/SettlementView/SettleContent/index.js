@@ -13,12 +13,13 @@ export default class SettleContent extends Component {
   }
 
   render() {
+    let {productInfo, totalWeight} = this.props
     return (
       <View style={styles.settleContentWrapper}>
         <StoreTitle></StoreTitle>
         <ProductList
-          productInfo={this.props.productInfo}
-          totalWeight={this.props.totalWeight}></ProductList>
+          productInfo={productInfo}
+          totalWeight={totalWeight}></ProductList>
         <View><Text>其它组件</Text></View>
       </View>
     );
