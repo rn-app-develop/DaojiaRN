@@ -8,10 +8,16 @@ import {
 } from 'react-native';
 
 export default class MyComponent extends Component {
+  renderMoneyItem () {
+
+  }
+
   render() {
+    let {moneyInfo, disMoneyInfo} = this.props
     return (
       <View style={styles.container}>
-        <Text>I'm the MyComponent component</Text>
+        {this.renderMoneyItem(moneyInfo)}
+        {this.renderMoneyItem(disMoneyInfo)}
       </View>
     );
   }
@@ -19,6 +25,6 @@ export default class MyComponent extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    paddingTop: 20,
   },
 });

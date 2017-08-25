@@ -6,7 +6,7 @@ import {
   ListView
 } from 'react-native';
 import StoreTitle from './StoreTitle'
-import ProductList from './ProductList'
+import ProductInfo from './ProductInfo'
 import MoneyInfo from '../MoneyInfo'
 export default class SettleContent extends Component {
   componentDidMount () {
@@ -18,9 +18,9 @@ export default class SettleContent extends Component {
     return (
       <View style={styles.settleContentWrapper}>
         <StoreTitle></StoreTitle>
-        <ProductList
+        <ProductInfo
           productInfo={productInfo}
-          totalWeight={totalWeight}></ProductList>
+          totalWeight={totalWeight}></ProductInfo>
         <MoneyInfo
           moneyInfo={moneyInfo}
           disMoneyInfo={disMoneyInfo}>
