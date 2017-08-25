@@ -7,19 +7,24 @@ import {
 } from 'react-native';
 import StoreTitle from './StoreTitle'
 import ProductList from './ProductList'
-
+import MoneyInfo from '../MoneyInfo'
 export default class SettleContent extends Component {
   componentDidMount () {
   }
 
   render() {
-    let {productInfo, totalWeight} = this.props
+    console.log(this.props);
+    let {productInfo, totalWeight, moneyInfo, disMoneyInfo} = this.props
     return (
       <View style={styles.settleContentWrapper}>
         <StoreTitle></StoreTitle>
         <ProductList
           productInfo={productInfo}
           totalWeight={totalWeight}></ProductList>
+        <MoneyInfo
+          moneyInfo={moneyInfo}
+          disMoneyInfo={disMoneyInfo}>
+        </MoneyInfo>
         <View><Text>其它组件</Text></View>
       </View>
     );

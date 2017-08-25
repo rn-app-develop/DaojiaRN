@@ -56,7 +56,7 @@ export default class ProductList extends Component {
         <TouchableWithoutFeedback
           onPress={this.toggle.bind(this)}>
           <View style={styles.totalInfo}>
-            <ContentText style={{color: '#888'}}>共{list.length}件/{this.props.totalWeight}kg</ContentText>
+            <ContentText style={{color: '#888'}}>共{list.length}件 / {this.props.totalWeight}kg</ContentText>
             <IconArrow direction={this.state.expanded ? 'top' : 'bottom'} style={styles.arrow}></IconArrow>
           </View>
         </TouchableWithoutFeedback>

@@ -20,25 +20,22 @@ export default class SettlementView extends Component {
   render() {
     // console.log(this.state.settleData);
     let settleData = this.state.settleData;
-    let modulesMap = new Map()
+    let modulesMap = {}
     for (module of settleData.newModules) {
-      modulesMap.set(module.moduleKey, module.data)
+      modulesMap[module.moduleKey] = module.data
     }
-    // console.log(modulesMap);
     return (
       <View style={styles.container}>
         <SettleAddress
           ></SettleAddress>
         <ScrollView style={styles.scrollView}>
           <DeliverTime
-            deliverTime={modulesMap.get('deliverTime')}
+            deliverTime={modulesMap.deliverTime}
             distributionType={settleData.distributionType} >
           </DeliverTime>
           <SettleContent
-            productInfo={modulesMap.get('productInfo')}
+            {...modulesMap}
             totalWeight={settleData.totalWeight}
-            moneyInfo={modulesMap.get('moneyInfo')}
-            disMoneyInfo={modulesMap.get('disMoneyInfo')}
             >
           </SettleContent>
         </ScrollView>
