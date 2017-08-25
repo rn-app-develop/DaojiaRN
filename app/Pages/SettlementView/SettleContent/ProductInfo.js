@@ -7,7 +7,7 @@ import {
   TouchableWithoutFeedback
 } from 'react-native';
 import ProductItem from './ProductItem'
-import ContentText from './ContentText'
+import ContentText from '../ContentText'
 import IconArrow from '../IconArrow'
 
 export default class ProductList extends Component {

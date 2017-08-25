@@ -4,7 +4,7 @@ import {
   Image,
   StyleSheet,
 } from 'react-native';
-import ContentText from './ContentText'
+import ContentText from '../ContentText'
 import RMB from './RMB'
 
 export default class ProductPrice extends PureComponent {

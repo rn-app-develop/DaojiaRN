@@ -6,10 +6,15 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import MonyerItem from './MoneyItem'
 
 export default class MyComponent extends Component {
-  renderMoneyItem () {
-
+  renderMoneyItem (moneyInfo) {
+    return moneyInfo.map((val, index) => {
+      return (
+        <MonyerItem key={val.name} item={val}></MonyerItem>
+      )
+    })
   }
 
   render() {

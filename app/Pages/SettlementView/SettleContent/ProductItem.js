@@ -4,7 +4,7 @@ import {
   Image,
   StyleSheet,
 } from 'react-native';
-import ContentText from './ContentText'
+import ContentText from '../ContentText'
 import RMB from './RMB'
 import ProductPrice from './ProductPrice'
 

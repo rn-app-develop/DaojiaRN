@@ -4,7 +4,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
-import ContentText from './ContentText'
+import ContentText from '../ContentText'
 
 export default class SettleContent extends PureComponent {
   render() {
