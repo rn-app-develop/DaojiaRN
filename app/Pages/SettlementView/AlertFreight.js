@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import {
   Modal,
   Text,
-  TouchableHighlight,
+  TouchableOpacity,
   View,
+  Image,
   StyleSheet
 } from 'react-native';
+
+import ContentText from './ContentText'
+import IconClose from '../../Assets/X.png'
 
 export default class AlertFreight extends Component {
 
@@ -16,12 +20,18 @@ export default class AlertFreight extends Component {
   render() {
     let {childMoneyList, title, descText, value} = this.props
 
+    let freightList = childMoneyList.map((val) => {
+      return (
+        <View key={val.name} style={styles.freightItem}>
+          <ContentText>{val.name}</ContentText><ContentText>{val.value}</ContentText>
+        </View>
+      )
+    })
+
     return (
-      // <View style={{marginTop: 22}}>
         <Modal
           animationType="fade"
           transparent={true}
-          // presentationStyle='overFullScreen'
           visible={this.props.modalVisible}
           onRequestClose={() => {
             this.props.setModalVisible(false)
@@ -29,18 +39,27 @@ export default class AlertFreight extends Component {
           >
          <View style={styles.mask}>
           <View style={styles.alertWrapper}>
-            <Text style={styles.alertTitle}>{title}</Text>
+            {/* 一级标题 */}
+            <ContentText style={styles.alertTitle}>{title}</ContentText>
 
+            {/* 总计 */}
             <View style={[styles.freightItem, styles.freightTotal]}>
-              <Text>总计</Text>
-              <Text>{value}</Text>
+              <ContentText style={{fontWeight: 'bold'}}>总计</ContentText><ContentText>{value}</ContentText>
             </View>
 
-            <TouchableHighlight onPress={() => {
+            {freightList}
+
+            {descText ? (
+              <View style={styles.descContainer}>
+                <ContentText style={styles.descTextTitle}>说明</ContentText>
+                <ContentText style={styles.descText}>{descText.replace('<br/>', '\n')}</ContentText>
+              </View>
+            ) : null }
+            <TouchableOpacity style={styles.closeBtn} onPress={() => {
               this.props.setModalVisible(false)
             }}>
-              <Text>Hide Modal</Text>
-            </TouchableHighlight>
+            <Image style={styles.iconClose} source={IconClose}></Image>
+          </TouchableOpacity>
           </View>
          </View>
         </Modal>
@@ -72,6 +91,34 @@ const styles = StyleSheet.create({
   freightItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-
+    paddingBottom: 13,
+  },
+  freightTotal: {
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#e8e8e8',
+    paddingBottom: 20,
+    marginBottom: 15
+  },
+  descContainer: {
+    borderTopWidth: 0.5,
+    borderTopColor: '#e8e8e8',
+    paddingVertical: 12,
+  },
+  descTextTitle: {
+    fontWeight: 'bold',
+    paddingBottom: 12
+  },
+  descText: {
+    fontSize: 11,
+    color: '#999'
+  },
+  closeBtn: {
+    position: 'absolute',
+    bottom: -60,
+    alignSelf: 'center',
+  },
+  iconClose: {
+    width: 40,
+    height: 40,
   }
 });

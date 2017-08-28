@@ -24,8 +24,6 @@ export default class IconHelper extends Component {
   }
 
   render () {
-    let {childMoneyList, title, descText, value} = this.props
-
     return (
       <View>
         <AlertFreight
