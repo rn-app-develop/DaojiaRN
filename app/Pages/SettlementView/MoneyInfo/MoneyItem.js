@@ -27,7 +27,7 @@ export default class MoneyItem extends Component {
               {item.name}
             </ContentText>
 
-            {item.childMoneyList && item.childMoneyList.length > 0 ? <IconHelper></IconHelper> : null}
+            {item.childMoneyList && item.childMoneyList.length > 0 ? <IconHelper {...item}></IconHelper> : null}
           </View>
           <ContentText style={{color: item.color}}>{item.value}</ContentText>
         </View>
