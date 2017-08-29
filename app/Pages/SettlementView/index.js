@@ -7,7 +7,7 @@ import {
   ScrollView
 } from 'react-native'
 import SettleSubmit from './SettleSubmit'
-import SettleAddress from './SettleAddress'
+import ReceiptAddress from './ReceiptAddress'
 import DeliverTime from './DeliverTime'
 import SettleContent from './SettleContent'
 import settleData from './_TestData'
@@ -26,8 +26,9 @@ export default class SettlementView extends Component {
     }
     return (
       <View style={styles.container}>
-        <SettleAddress
-          ></SettleAddress>
+        <ReceiptAddress
+          receiptAddress={modulesMap.receiptAddress}
+          ></ReceiptAddress>
         <ScrollView style={styles.scrollView}>
           <DeliverTime
             deliverTime={modulesMap.deliverTime}
