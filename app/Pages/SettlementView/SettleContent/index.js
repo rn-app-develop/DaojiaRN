@@ -8,6 +8,8 @@ import {
 import StoreTitle from './StoreTitle'
 import ProductInfo from './ProductInfo'
 import MoneyInfo from '../MoneyInfo'
+import CouponInfo from '../CouponInfo'
+
 export default class SettleContent extends Component {
   componentDidMount () {
   }
@@ -25,7 +27,7 @@ export default class SettleContent extends Component {
           moneyInfo={moneyInfo}
           disMoneyInfo={disMoneyInfo}>
         </MoneyInfo>
-        <View><Text>其它组件</Text></View>
+        <CouponInfo></CouponInfo>
       </View>
     );
   }
