@@ -44,7 +44,12 @@ export default class AlertFreight extends Component {
 
             {/* 总计 */}
             <View style={[styles.freightItem, styles.freightTotal]}>
-              <ContentText style={{fontWeight: 'bold'}}>总计</ContentText><ContentText>{value}</ContentText>
+              <ContentText style={{fontWeight: 'bold'}}>总计</ContentText>
+
+              <ContentText style={{fontSize: 26, lineHeight: 28}}>
+                <ContentText style={{fontSize: 20}}>￥</ContentText>
+                {value.replace('￥', '')}
+              </ContentText>
             </View>
 
             {freightList}
@@ -97,7 +102,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.5,
     borderBottomColor: '#e8e8e8',
     paddingBottom: 20,
-    marginBottom: 15
+    marginBottom: 15,
+    alignItems: 'center'
+
   },
   descContainer: {
     borderTopWidth: 0.5,
