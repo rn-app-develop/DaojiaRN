@@ -5,9 +5,13 @@ import {
   View,
   Text,
   StyleSheet,
+  Image
 } from 'react-native';
 
+import SettlePosition from '../../../Assets/SettlePosition.png'
 import AddressUser from './AddressUser'
+import AddressText from './AddressText'
+import IconArrow from '../IconArrow'
 
 export default class AddressDetail extends Component {
   render() {
@@ -33,6 +37,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     paddingTop: 15,
     flexDirection: 'row',
+  },
+  settlePosition: {
+    width: 18,
+    height: 18,
+    marginRight: 10,
+    marginTop: 3,
   },
   addressName: {
     flex: 1,

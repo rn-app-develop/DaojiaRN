@@ -22,7 +22,7 @@ export default class SettleAddress extends Component {
       <View style={styles.settleAddress}>
         <AddressText style={styles.title}>订单配送至</AddressText>
         {
-          props.type === '1'
+          props.type !== '1'
           ? <AddressDetail address={props.addressVo}></AddressDetail>
           : <AddressSelect title={props.title} isNew={props.type !== '4'}></AddressSelect>
         }
