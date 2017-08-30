@@ -21,12 +21,18 @@ export default class AddressSelect extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    // paddingTop: 15,
-    paddingBottom: 30
+    marginTop: 15,
+    marginBottom: 20,
+    borderColor: '#fff',
+    borderWidth: 0.5,
+    height: 30,
+    width: 180,
+    // alignItems: 'center',
+    justifyContent: 'center'
   },
   title: {
     textAlign: 'center',
-    alignSelf: 'center'
+    lineHeight: 16,
+    // lineHeight: 28
   },
 });
