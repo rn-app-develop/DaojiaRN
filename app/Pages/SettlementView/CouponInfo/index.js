@@ -5,6 +5,7 @@ import {
   View,
   Text,
   StyleSheet,
+  FlatList
 } from 'react-native';
 
 export default class MyComponent extends Component {
