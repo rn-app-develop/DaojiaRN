@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 
 export default class MyComponent extends Component {
+  let props = this.props
+
   render() {
     return (
       <View style={styles.container}>

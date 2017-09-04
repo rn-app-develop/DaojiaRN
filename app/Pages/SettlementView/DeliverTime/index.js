@@ -8,6 +8,8 @@ import DeliverTag from './DeliverTag'
 import IconArrow from '../IconArrow'
 export default class DeliverTime extends Component {
   render () {
+    let props = this.props
+
     return (
       <View style={styles.deliverTimeContainer}>
         <DeliverTag></DeliverTag>
